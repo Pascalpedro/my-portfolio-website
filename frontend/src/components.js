@@ -171,26 +171,26 @@ export const Sidebar = ({ currentPage, setCurrentPage }) => {
 
   return (
     <motion.div 
-      className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-4"
+      className="bg-gray-800/30 backdrop-blur-md rounded-3xl p-6 border border-gray-700/50"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <div className="flex lg:flex-col gap-2">
+      <div className="flex lg:flex-col gap-3">
         {navItems.map((item) => (
           <motion.button
             key={item.id}
             onClick={() => setCurrentPage(item.id)}
-            className={`flex items-center gap-3 p-3 rounded-xl transition-all ${
+            className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-200 ${
               currentPage === item.id 
-                ? 'bg-blue-600 text-white' 
-                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+                ? 'bg-blue-600 text-white shadow-lg' 
+                : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
             }`}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.02, x: currentPage === item.id ? 0 : 4 }}
             whileTap={{ scale: 0.98 }}
           >
-            <item.icon size={20} />
-            <span className="text-sm font-medium hidden lg:block">{item.label}</span>
+            <item.icon size={22} />
+            <span className="text-sm font-medium tracking-wider hidden lg:block">{item.label}</span>
           </motion.button>
         ))}
       </div>
