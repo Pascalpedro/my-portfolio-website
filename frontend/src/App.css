@@ -26,6 +26,15 @@
   backdrop-filter: blur(8px);
 }
 
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Triangle clip path for geometric shapes */
+.clip-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
 /* Portfolio grid hover effects */
 .portfolio-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -93,4 +102,16 @@
   animation: shimmer 2s linear infinite;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   background-size: 200px 100%;
+}
+
+/* Enhanced card styling */
+.card-glass {
+  background: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+/* Improved border radius */
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
