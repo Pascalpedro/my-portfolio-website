@@ -88,70 +88,71 @@ export const GeometricBackground = () => {
 export const Header = () => {
   return (
     <motion.div 
-      className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6"
+      className="bg-gray-800/30 backdrop-blur-md rounded-3xl p-6 border border-gray-700/50"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="text-center">
         <motion.div 
-          className="relative w-24 h-24 mx-auto mb-4"
+          className="relative w-28 h-28 mx-auto mb-6"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
           <img 
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
             alt="Aditya Pratama" 
-            className="w-full h-full rounded-full object-cover border-4 border-blue-500"
+            className="w-full h-full rounded-3xl object-cover border-4 border-blue-500"
           />
-          <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-gray-800"></div>
+          <div className="absolute -bottom-1 -right-1 w-7 h-7 bg-green-500 rounded-full border-3 border-gray-800"></div>
         </motion.div>
         
-        <h1 className="text-xl font-bold text-white mb-1">Aditya Pratama</h1>
-        <p className="text-gray-400 text-sm mb-4">DevOps | SRE | Cloud Engineer</p>
+        <h1 className="text-2xl font-bold text-white mb-2">Aditya Pratama</h1>
+        <p className="text-gray-400 text-sm mb-6 bg-gray-700/50 rounded-full px-4 py-2 inline-block">
+          DevOps | SRE | Cloud Engineer
+        </p>
         
-        <div className="flex justify-center space-x-3 mb-4">
+        <div className="flex justify-center space-x-2 mb-6">
           {[Github, Twitter, Instagram, Linkedin].map((Icon, index) => (
             <motion.a
               key={index}
               href="#"
-              className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600 transition-colors"
-              whileHover={{ scale: 1.1 }}
+              className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+              whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Icon size={16} />
+              <Icon size={18} />
             </motion.a>
           ))}
         </div>
         
-        <div className="space-y-3 text-sm">
+        <div className="space-y-4 text-sm border-t border-gray-700/50 pt-6">
           <div className="flex justify-between items-center">
-            <span className="text-gray-400">EMAIL</span>
-            <span className="text-white">aditya@adityacprtm.dev</span>
+            <span className="text-gray-500 uppercase tracking-wider text-xs">EMAIL</span>
+            <span className="text-white">aditya@adityacprtm.dev ✉</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-gray-400">LOCATION</span>
+            <span className="text-gray-500 uppercase tracking-wider text-xs">LOCATION</span>
             <span className="text-white flex items-center gap-1">
-              <MapPin size={12} />
-              Jakarta, ID
+              📍 Jakarta, ID
             </span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-gray-400">STATUS</span>
+            <span className="text-gray-500 uppercase tracking-wider text-xs">STATUS</span>
             <span className="text-green-400 flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               Online
             </span>
           </div>
         </div>
         
         <motion.button 
-          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors"
-          whileHover={{ scale: 1.02 }}
+          className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all duration-200 font-medium"
+          whileHover={{ scale: 1.02, y: -1 }}
           whileTap={{ scale: 0.98 }}
         >
-          <Download size={16} />
-          CV Download
+          <Download size={18} />
+          📄 CV Download
         </motion.button>
       </div>
     </motion.div>
