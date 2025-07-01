@@ -25,30 +25,12 @@ import {
 export const GeometricBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {/* Top Left Large Geometric Cluster */}
       <motion.div
-        className="absolute -top-20 -left-20 w-96 h-96"
+        className="absolute -top-32 -left-32 w-[500px] h-[500px]"
         animate={{ 
           rotate: [0, 360],
-          scale: [1, 1.1, 1]
-        }}
-        transition={{ 
-          duration: 20, 
-          repeat: Infinity, 
-          ease: "linear" 
-        }}
-      >
-        <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 transform rotate-45 rounded-lg opacity-20"></div>
-          <div className="absolute inset-4 bg-gradient-to-br from-cyan-500 to-teal-500 transform -rotate-12 rounded-lg opacity-20"></div>
-          <div className="absolute inset-8 bg-gradient-to-br from-yellow-500 to-orange-600 transform rotate-12 rounded-lg opacity-20"></div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute -bottom-20 -right-20 w-80 h-80"
-        animate={{ 
-          rotate: [360, 0],
-          scale: [1, 1.2, 1]
+          scale: [1, 1.05, 1]
         }}
         transition={{ 
           duration: 25, 
@@ -57,27 +39,79 @@ export const GeometricBackground = () => {
         }}
       >
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-gradient-to-tl from-cyan-500 to-blue-500 transform rotate-45 rounded-lg opacity-20"></div>
-          <div className="absolute inset-4 bg-gradient-to-tl from-purple-500 to-pink-500 transform -rotate-12 rounded-lg opacity-20"></div>
-          <div className="absolute inset-8 bg-gradient-to-tl from-teal-500 to-cyan-600 transform rotate-12 rounded-lg opacity-20"></div>
+          {/* Main orange triangle */}
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600 transform rotate-45 rounded-lg opacity-15 clip-triangle"></div>
+          {/* Cyan triangle */}
+          <div className="absolute inset-8 bg-gradient-to-br from-cyan-400 via-teal-500 to-cyan-600 transform -rotate-12 rounded-lg opacity-20 clip-triangle"></div>
+          {/* Yellow triangle */}
+          <div className="absolute inset-16 bg-gradient-to-br from-yellow-400 via-orange-500 to-yellow-600 transform rotate-12 rounded-lg opacity-15 clip-triangle"></div>
+          {/* Small red accent */}
+          <div className="absolute inset-24 bg-gradient-to-br from-red-500 to-red-600 transform rotate-45 rounded-lg opacity-25 clip-triangle"></div>
         </div>
       </motion.div>
 
+      {/* Bottom Right Geometric Cluster */}
       <motion.div
-        className="absolute top-1/2 right-10 w-64 h-64"
+        className="absolute -bottom-32 -right-32 w-[450px] h-[450px]"
         animate={{ 
-          rotate: [0, -360],
-          y: [-20, 20, -20]
+          rotate: [360, 0],
+          scale: [1, 1.1, 1]
         }}
         transition={{ 
-          duration: 15, 
+          duration: 30, 
+          repeat: Infinity, 
+          ease: "linear" 
+        }}
+      >
+        <div className="relative w-full h-full">
+          {/* Main teal triangle */}
+          <div className="absolute inset-0 bg-gradient-to-tl from-teal-500 via-cyan-500 to-teal-600 transform rotate-45 rounded-lg opacity-18 clip-triangle"></div>
+          {/* Purple triangle */}
+          <div className="absolute inset-6 bg-gradient-to-tl from-purple-500 via-blue-500 to-purple-600 transform -rotate-30 rounded-lg opacity-15 clip-triangle"></div>
+          {/* Orange accent */}
+          <div className="absolute inset-12 bg-gradient-to-tl from-orange-500 to-orange-600 transform rotate-12 rounded-lg opacity-20 clip-triangle"></div>
+        </div>
+      </motion.div>
+
+      {/* Top Right Floating Elements */}
+      <motion.div
+        className="absolute top-20 right-20 w-[300px] h-[300px]"
+        animate={{ 
+          rotate: [0, -360],
+          y: [-15, 15, -15],
+          x: [-10, 10, -10]
+        }}
+        transition={{ 
+          duration: 20, 
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
       >
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-teal-500 transform rotate-45 rounded-lg opacity-15"></div>
-          <div className="absolute inset-6 bg-gradient-to-br from-blue-500 to-cyan-500 transform -rotate-30 rounded-lg opacity-15"></div>
+          {/* Cyan floating triangle */}
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 transform rotate-45 rounded-lg opacity-12 clip-triangle"></div>
+          {/* Small orange accent */}
+          <div className="absolute inset-8 bg-gradient-to-br from-orange-400 to-red-500 transform -rotate-30 rounded-lg opacity-15 clip-triangle"></div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Left Supporting Elements */}
+      <motion.div
+        className="absolute bottom-40 left-20 w-[250px] h-[250px]"
+        animate={{ 
+          rotate: [180, -180],
+          scale: [0.8, 1, 0.8]
+        }}
+        transition={{ 
+          duration: 18, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+      >
+        <div className="relative w-full h-full">
+          {/* Small geometric elements */}
+          <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-500 transform rotate-45 rounded-lg opacity-10 clip-triangle"></div>
+          <div className="absolute inset-6 bg-gradient-to-br from-teal-500 to-cyan-500 transform -rotate-45 rounded-lg opacity-12 clip-triangle"></div>
         </div>
       </motion.div>
     </div>
