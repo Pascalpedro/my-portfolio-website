@@ -36,26 +36,32 @@ function App() {
     <div className="App min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <GeometricBackground />
       
-      <div className="relative z-10 max-w-7xl mx-auto p-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Header Section - Mobile/Desktop */}
-          <div className="lg:col-span-4 xl:col-span-3">
+      <div className="relative z-10 max-w-6xl mx-auto p-4 lg:p-6">
+        <div className="flex gap-6">
+          {/* Left Sidebar - Fixed Width */}
+          <div className="hidden lg:flex flex-col gap-6 w-80">
             <Header />
-            <div className="mt-6 hidden lg:block">
-              <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            </div>
+            <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="lg:hidden">
+          {/* Mobile Header and Navigation */}
+          <div className="lg:hidden w-full space-y-6">
+            <Header />
             <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-8 xl:col-span-9">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 min-h-[600px]">
+          <div className="hidden lg:block flex-1">
+            <div className="bg-gray-800/30 backdrop-blur-md rounded-3xl p-8 min-h-[700px] border border-gray-700/50">
               {renderPage()}
             </div>
+          </div>
+        </div>
+        
+        {/* Mobile Main Content */}
+        <div className="lg:hidden mt-6">
+          <div className="bg-gray-800/30 backdrop-blur-md rounded-3xl p-6 min-h-[600px] border border-gray-700/50">
+            {renderPage()}
           </div>
         </div>
       </div>
