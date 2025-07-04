@@ -1,24 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  User, 
-  FileText, 
-  Briefcase, 
-  BookOpen, 
-  Mail, 
-  Github, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Download,
-  MapPin,
-  Calendar,
-  ExternalLink,
-  Monitor,
-  Cloud,
-  Shield,
-  Code,
-  Filter
+import {
+  User, FileText, Briefcase, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
+  Download, MapPin, Monitor, Cloud, Shield, Code, Filter
 } from 'lucide-react';
 
 // Geometric Background Component
@@ -134,16 +118,16 @@ export const Header = () => {
           transition={{ duration: 0.2 }}
         >
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
-            alt="Aditya Pratama" 
+            src="/profile.jpg" 
+            alt="Pascal Attama" 
             className="w-full h-full rounded-3xl object-cover border-4 border-blue-500"
           />
           <div className="absolute -bottom-1 -right-1 w-7 h-7 bg-green-500 rounded-full border-3 border-gray-800"></div>
         </motion.div>
         
-        <h1 className="text-2xl font-bold text-white mb-2">Aditya Pratama</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">Pascal Attama</h1>
         <p className="text-gray-400 text-sm mb-6 bg-gray-700/50 rounded-full px-4 py-2 inline-block">
-          DevOps | SRE | Cloud Engineer
+          Cloud Engineer | DevOps | FinOps
         </p>
         
         <div className="flex justify-center space-x-2 mb-6">
@@ -163,13 +147,11 @@ export const Header = () => {
         <div className="space-y-4 text-sm border-t border-gray-700/50 pt-6">
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">EMAIL</span>
-            <span className="text-white">aditya@adityacprtm.dev ✉</span>
+            <span className="text-white">attamapascalpedro@gmail.com ✉</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">LOCATION</span>
-            <span className="text-white flex items-center gap-1">
-              📍 Jakarta, ID
-            </span>
+            <span className="text-white flex items-center gap-1"> 📍 Lagos, Nigeria</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">STATUS</span>
@@ -181,9 +163,9 @@ export const Header = () => {
         </div>
         
         <motion.button 
+          href="/Pascal_Attama_CV.pdf"
+          download
           className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all duration-200 font-medium"
-          whileHover={{ scale: 1.02, y: -1 }}
-          whileTap={{ scale: 0.98 }}
         >
           <Download size={18} />
           📄 CV Download
@@ -236,30 +218,35 @@ export const Sidebar = ({ currentPage, setCurrentPage }) => {
 export const AboutPage = () => {
   const services = [
     {
+      icon: Cloud,
+      title: 'Cloud Engineer',
+      description: 'I design, deploy and maintain scalable, secure and cost-effective cloud infrastructure and application'
+    },
+    {
       icon: Monitor,
       title: 'DevOps',
       description: 'I enjoy to improve the speed and quality of delivery, automate and achieve CI/CD'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Engineer',
-      description: 'I enjoy design, secure and maintenance of an organization\'s cloud-based infrastructure and application'
+      icon: Monitor,
+      title: 'FinOps',
+      description: 'I enjoy optimizing and reducing cloud spend through visibility,automation, and architectural best practices'
     },
     {
       icon: Shield,
-      title: 'SRE',
-      description: 'I cultivate the processes and tools that ensure the scalability, reliability and availability of software systems'
+      title: 'Infrastructure Security',
+      description: 'I implement IAM, security groups, VPC flow logs, and GuardDuty to secure AWS environments'
     },
     {
       icon: Code,
-      title: 'Software Development',
-      description: 'I enjoy learning software development either for personal or specific purposes'
+      title: 'Infrastructure as Code',
+      description: 'I enjoy automating cloud provisioning using Terraform and Ansible for consistent deployment'
     }
   ];
 
   const clients = [
-    { name: 'Transletin', logo: '🔤' },
-    { name: 'Duangbisini', logo: '😊' }
+    { name: 'Upwork', logo: '🔤' },
+    { name: 'Linkedln', logo: '😊' }
   ];
 
   return (
@@ -273,21 +260,26 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            A passionate and skilled DevOps, SRE, and Cloud Engineer with a strong background in infrastructure provisioning, 
-            automation, and monitoring. I have completed and been certified by Google Cloud for Associate Cloud Engineer and AWS 
-            for AWS Certified Cloud Practitioner.
+            I'm a results-driven Cloud Engineer with a strong background in cloud architecture,
+            automation, networking, and FinOps. 
           </p>
           <p>
-            Have experience working with tools such as Jenkins, Terraform, and Ansible to streamline development processes and 
-            ensure efficient code deployment. Proficient in managing performance and monitoring cloud infrastructure services on AWS and GCP, 
-            as well as maintaining high availability in Kubernetes-based container clusters. Successfully implemented monitoring and 
-            logging strategies, using Grafana and Datadog to ensure system performance and implemented GitOps for managing infrastructure as code. My expertise also includes integrating automation testing into 
-            the CI/CD pipeline and developing scripts to automate tasks, improving efficiency and reducing manual effort.
+            I have experience working with Cloud services, Infrastructure as Code (IaC), and cloud security tools, with a track record of optimizing cloud infrastructure, 
+            reducing operational costs, and improving system scalability. 
+            I have led cloud deployments and migrations on the AWS and various cloud infrastructure. 
+            I optimize AWS infrastructure to reduce costs, enhanced efficiency, automated and delivered resilient deployments by leveraging tools such as Terraform, Ansible, Docker, Kubernetes, and Python.
+          </p>
+
+                    
+          <p>
+            With a Bachelor's degree in Physics & Astronomy from the University of Nigeria, it sharpened my analytical thinking, data analysis, and problem-solving skills. 
+            These strengths empowers me as a Cloud Engineer to tackle complex infrastructure challenges, apply evidence-based decisions, and build efficient, scalable systems that drive innovation across disciplines. 
+            I am committed to continuous learning and professional 
+            growth. 
           </p>
           <p>
-            With a Bachelor's degree in Computer Science and a strong GPA, I am committed to continuous learning and professional 
-            growth. I am seeking opportunities to leverage my skills and contribute to the success of DevOps, SRE and cloud 
-            engineering projects.
+            I am passionate about bridging the gaps between business and technology by building resilient cloud solutions and mentoring teams to drive cloud adoption and innovation.
+            I am seeking opportunities to leverage my skills and contribute to the success of Cloud, FinOps and DevOps projects for organizational's sucess.
           </p>
         </div>
       </div>
@@ -384,13 +376,7 @@ export const PortfolioPage = () => {
       image: 'https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxuZXR3b3JrJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHxibHVlfDE3NTE0MDIwODl8MA&ixlib=rb-4.1.0&q=85',
       tags: ['Website']
     },
-    {
-      id: 5,
-      title: 'TryHackMe Badge',
-      category: 'Badge',
-      image: 'https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjB0ZXJtaW5hbHxlbnwwfHx8Ymx1ZXwxNzUxNDAyMDk1fDA&ixlib=rb-4.1.0&q=85',
-      tags: ['Profile']
-    },
+    
     {
       id: 6,
       title: 'ThingsBin Web and Application IoT',
@@ -425,7 +411,35 @@ export const PortfolioPage = () => {
       category: 'Project',
       image: 'https://images.unsplash.com/photo-1598149852075-62ed16a6edb2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxuZXR3b3JrJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHxibHVlfDE3NTE0MDIwODl8MA&ixlib=rb-4.1.0&q=85',
       tags: ['Project']
-    }
+    },
+    {
+    id: 1,
+    title: 'PedroOps – FinOps SaaS',
+    category: 'Project',
+    image: 'https://yourdomain.com/pedroops-screenshot.jpg',
+    tags: ['FinOps', 'React', 'AWS']
+  },
+  {
+    id: 2,
+    title: 'Secure Flask Microservice',
+    category: 'Project',
+    image: 'https://yourdomain.com/flask-api.jpg',
+    tags: ['Auth0', 'Docker', 'AWS']
+  },
+  {
+    id: 3,
+    title: 'AWS Certified Cloud Practitioner',
+    category: 'Certifications',
+    image: 'https://yourdomain.com/aws-cert.jpg',
+    tags: ['Certification']
+  },
+  {
+    id: 4,
+    title: 'HCIA - Huawei Routing & Switching',
+    category: 'Certifications',
+    image: 'https://yourdomain.com/hcia.jpg',
+    tags: ['Networking']
+  }
   ];
 
   const filteredItems = activeFilter === 'All' 
@@ -510,25 +524,34 @@ export const PortfolioPage = () => {
 export const ResumePage = () => {
   const experiences = [
     {
-      title: 'Senior DevOps Engineer',
-      company: 'Tech Company',
+      title: 'Cloud Engineer',
+      company: 'Trakatel Limited',
       period: '2022 - Present',
-      description: 'Leading DevOps initiatives and cloud infrastructure management.'
+      description: 'Designed AWS architectures, optimized cloud costs, implemented IaC, and led DevOps automation.'
     },
     {
-      title: 'Cloud Engineer',
-      company: 'Cloud Solutions Inc',
+      title: 'Technical Support Engineer',
+      company: 'Unitech Global Resources',
       period: '2020 - 2022',
-      description: 'Designed and implemented cloud architectures on AWS and GCP.'
+      description: 'Provided Tier-2 support, automated ticket workflows, and improved cloud deployment efficiency..'
+    },
+    {
+      title: 'Network Engineer',
+      company: 'Cambridge Broadband Networks',
+      period: '2016 - 2020',
+      description: 'Implemented L1–L3 Enterprise Network infrastructure, VLANs, and secured network operations for enterprise clients'
     }
   ];
 
   const skills = [
-    { name: 'AWS', level: 90 },
+    { name: 'AWS & Cloud Architecture', level: 90 },
+    { name: 'Linux', level: 90 },
+    { name: 'Terraform & Ansible', level: 85 },
     { name: 'Docker & Kubernetes', level: 85 },
-    { name: 'Terraform', level: 80 },
-    { name: 'Jenkins', level: 75 },
-    { name: 'Python', level: 70 }
+    { name: 'IP Networks & VPCs', level: 80 },
+    { name: 'Git', level: 70 },
+    { name: 'Python & Bash Scripting', level: 70 },
+    
   ];
 
   return (
@@ -658,11 +681,11 @@ export const ContactPage = () => {
           <div className="space-y-4 text-gray-300">
             <div className="flex items-center gap-3">
               <Mail className="text-blue-400" size={20} />
-              <span>aditya@adityacprtm.dev</span>
+              <span>attamapascalpedro@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-blue-400" size={20} />
-              <span>Jakarta, Indonesia</span>
+              <span>Lagos, Nigeria</span>
             </div>
           </div>
         </div>
