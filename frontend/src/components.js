@@ -187,7 +187,12 @@ export const Header = () => {
         <div className="space-y-4 text-sm border-t border-gray-700/50 pt-6">
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">EMAIL</span>
-            <span className="text-white">attamapascalpedro@gmail.com ✉</span>
+            <a 
+              href="mailto:attamapascalpedro@gmail.com" 
+              className="text-blue-400 hover:underline transition duration-200"
+            >
+               Send Email ✉
+            </a>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">LOCATION</span>
