@@ -162,14 +162,16 @@ export const Header = () => {
           </div>
         </div>
         
-        <motion.button 
+        <a 
           href="/Pascal_Attama_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           download
           className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all duration-200 font-medium"
         >
           <Download size={18} />
-          📄 CV Download
-        </motion.button>
+          📄 Download CV
+        </a>
       </div>
     </motion.div>
   );
