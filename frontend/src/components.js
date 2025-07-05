@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  User, FileText, Briefcase, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
+  User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
   Download, MapPin, Monitor, Cloud, Shield, Code, Filter
 } from 'lucide-react';
 
@@ -131,18 +131,58 @@ export const Header = () => {
         </p>
         
         <div className="flex justify-center space-x-2 mb-6">
-          {[Github, Twitter, Instagram, Linkedin].map((Icon, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Icon size={18} />
-            </motion.a>
-          ))}
+          <motion.a
+            href="https://github.com/Pascalpedro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Github size={18} />
+          </motion.a>
+          <motion.a
+            href="https://X.com/Pascalpedro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Twitter size={18} />
+          </motion.a>
+          <motion.a
+            href="https://instagram.com/pascalpedro47"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Instagram size={18} />
+          </motion.a>
+          <motion.a
+            href="https://linkedin.com/in/pascal-attama"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Linkedin size={18} />
+          </motion.a>
+          <motion.a
+            href="https://credly.com/users/pascal-attama"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Globe size={18} />
+          </motion.a>        
         </div>
+
         
         <div className="space-y-4 text-sm border-t border-gray-700/50 pt-6">
           <div className="flex justify-between items-center">
