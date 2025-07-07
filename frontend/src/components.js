@@ -565,6 +565,15 @@ export const PortfolioPage = () => {
   );
 };
 
+  const getWidth = (level) => {
+  switch (level) {
+    case "Beginner": return "40%";
+    case "Intermediate": return "70%";
+    case "Advanced": return "90%";
+    default: return "60%";
+  }
+};
+
 // Resume Page Component
 export const ResumePage = () => {
   const experiences = [
@@ -634,15 +643,34 @@ export const ResumePage = () => {
   ];  
 
   const skills = [
-    { name: 'AWS & Cloud Architecture', level: 90 },
-    { name: 'Linux', level: 90 },
-    { name: 'Terraform & Ansible', level: 85 },
-    { name: 'Docker & Kubernetes', level: 85 },
-    { name: 'IP Networks & VPCs', level: 80 },
-    { name: 'Git', level: 70 },
-    { name: 'Python & Bash Scripting', level: 70 },
+    { name: 'AWS & Cloud Architecture', level: "Intermediate" },
+    { name: 'Linux', level: "Advanced" },
+    { name: 'Terraform & Ansible', level: "Intermediate" },
+    { name: 'Docker & Kubernetes', level: "Intermediate" },
+    { name: 'IP Networks & VPCs', level: "Intermediate" },
+    { name: 'Git', level: "Intermediate" },
+    { name: 'Python & Bash Scripting', level: "Intermediate" },
     
   ];
+
+  const SkillBar = ({ name, level }) => (
+    <div className="mb-4">
+      <div className="flex justify-between mb-1">
+        <span className="text-white font-medium">{name}</span>
+        <span className="text-sm text-blue-300">{level}</span>
+      </div>
+      <div className="w-full bg-gray-700 rounded-full h-3">
+        <div
+          className="h-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700"
+          style={{ width: getWidth(level) }}
+        ></div>
+      </div>
+    </div>
+  
+    
+  
+  );
+
 
   return (
     <motion.div
@@ -763,33 +791,14 @@ export const ResumePage = () => {
       </div>
 
       {/* Skills Section */}
-      <div>
+      <div className="mt-10">
         <h3 className="text-xl font-bold text-white mb-6">Skills</h3>
-        <div className="space-y-4">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="bg-gray-700/50 rounded-xl p-4 border border-gray-600/50"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-white font-medium">{skill.name}</span>
-                <span className="text-gray-400 text-sm">{skill.level}%</span>
-              </div>
-              <div className="w-full bg-gray-600 rounded-full h-2">
-                <motion.div 
-                  className="bg-blue-500 h-2 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {skills.map((skill, index) => (
+          <SkillBar key={index} name={skill.name} level={skill.level} />
+        ))}
       </div>
+
+
     </motion.div>
   );
 };
