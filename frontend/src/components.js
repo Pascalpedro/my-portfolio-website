@@ -315,9 +315,7 @@ export const AboutPage = () => {
             reducing operational costs, and improving system scalability. 
             I have led cloud deployments and migrations on the AWS and various cloud infrastructure. 
             I optimize AWS infrastructure to reduce costs, enhanced efficiency, automated and delivered resilient deployments by leveraging tools such as Terraform, Ansible, Docker, Kubernetes, and Python.
-          </p>
-
-                    
+          </p>         
           <p>
             With a Bachelor's degree in Physics & Astronomy from the University of Nigeria, it sharpened my analytical thinking, data analysis, and problem-solving skills. 
             These strengths empowers me as a Cloud Engineer to tackle complex infrastructure challenges, apply evidence-based decisions, and build efficient, scalable systems that drive innovation across disciplines. 
@@ -571,24 +569,69 @@ export const PortfolioPage = () => {
 export const ResumePage = () => {
   const experiences = [
     {
-      title: 'Cloud Engineer',
       company: 'Trakatel Limited',
+      role: 'Cloud Engineer',
       period: '2022 - Present',
-      description: 'Designed AWS architectures, optimized cloud costs, implemented IaC, and led DevOps automation.'
+      location: 'Lagos, Nigeria',
+      responsibility: [
+        'Designs and deploys scalable AWS infrastructure using VPCs, EC2, S3, IAM, RDS, and Load Balancers, ensuring high availability and led network infrastructure migration to AWS for hybrid cloud connectivity, improving agility and reducing operational costs.',
+        'Optimizes AWS cost management by leveraging AWS Cost Explorer, AWS Budgets, and CloudWatch, proactively identify significant saving opportunities, reducing cloud expenses by 30%.',
+        'Streamlines and automate infrastructure deployment using Terraform and Ansible, reducing manual errors and provisioning time and increased efficiency by 20%.',
+        'Manages containerized network env and apps with Docker, Amazon ECS, Kubernetes (EKS) and VMware infra using the SDN arch model improving resource utilization and scalability.',
+        'Enhanced cloud security by implementing IAM roles, Security Groups, VPC Flow Logs, AWS GuardDuty, and implement network best practices and security protocols for robust operations.',
+        'Enhances network monitoring for faster incident response using CloudWatch, SNS, Nagios, Nmap, and Wireshark, and increased network efficiency through regular audits and optimization.',
+        'Led training sessions and mentorship programs to educate junior engineers on cloud best practices, fostering their professional development while documenting knowledge for training and sharing.'
+      ]
     },
     {
-      title: 'Technical Support Engineer',
+      role: 'Technical Support Engineer',
       company: 'Unitech Global Resources',
       period: '2020 - 2022',
-      description: 'Provided Tier-2 support, automated ticket workflows, and improved cloud deployment efficiency..'
+      location: 'Lagos, Nigeria',
+      responsibility: [
+        'Reduced MTTR metric with Tier-2 support and provided clear, concise technical support to cross-functional teams via email, CRM tools and phone, resolving one-third of issues on first contact.',
+        'Automated ticket creation and updates with cross-functional teams via Zendesk CRM to improve internal system integration and reduced customer churn by implementing automated workflows.',
+        'Optimized Auto-Scaling configurations for customer deployments, ensuring dynamic resource allocation and reducing downtime due to CPU/memory exhaustion.',
+        'Worked with development teams to resolve serverless architecture issues, optimizing compute resources and application response times.',
+        'Configured and maintained container-based PAAS environments, reducing system failures by 20% through preventive maintenance.',
+        'Created and deployed CronJob automation scripts to handle routine maintenance requests such as log analysis, backups, and resource scaling',
+        'Created detailed troubleshooting documentation and internal Knowledge Base using MkDocs and Confluence, improving knowledge-sharing and reducing support time and escalations for future users.'
+      ] 
     },
     {
-      title: 'Network Engineer',
+      role: 'Network Engineer',
       company: 'Cambridge Broadband Networks',
       period: '2016 - 2020',
-      description: 'Implemented L1–L3 Enterprise Network infrastructure, VLANs, and secured network operations for enterprise clients'
+      location: 'Lagos, Nigeria',
+      responsibility: [
+        'Implemented scalable L1, L2 and L3 network infrastructures with Cisco, MikroTik and Huawei routers, switches and other network devices using the TCP/IP model, BGP and OSPF routing protocols.',
+        'Implemented a centralized wireless LAN solution, improving network coverage and user experience.',
+        'Configured VLANs, VXLANs, STP/RSTP, and implemented network best practices and security policies for secure network segmentation for robust operations.',
+        'Reduced network resolution time by 20% with Tier-2 support, led enterprise network service deployments for MTN, and delivered successful network expansions and upgrades on schedule.',
+        'Achieved a 95% first-call resolution for user network issues.',
+        'Conducted a thorough pre-implementation analysis and TSS Network Survey with Pathloss, Lucid chart and GNS3 for accurate planning.'
+      ]  
     }
   ];
+
+  const education = [
+    {
+      institution: 'University of Nigeria',
+      degree: 'Bachelor\'s degree',
+      field: 'Physics and Astronomy',
+      period: 'Nov 2011 - July 2015',
+      location: 'Enugu, Nigeria'
+    },
+  ];
+
+  const nonformalEducation = [
+    {
+      institution: 'McKinsey & Company - McKinsey',
+      course: 'McKinsey Academy Forward and Advanced Program',
+      period: 'July 2023 - Dec 2023',
+      type: 'Online'
+    },
+  ];  
 
   const skills = [
     { name: 'AWS & Cloud Architecture', level: 90 },
@@ -606,27 +649,114 @@ export const ResumePage = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      className="space-y-8"
     >
       <h2 className="text-3xl font-bold text-white mb-8">Resume</h2>
       
       {/* Experience Section */}
-      <div className="mb-8">
-        <h3 className="text-xl font-bold text-white mb-6">Experience</h3>
-        <div className="space-y-6">
+      <div className="space-y-6">
+        <div className="flex items-center gap-3 mb-6">
+          <Briefcase className="text-yellow-500" size={24} />
+          <h3 className="text-xl font-bold text-white mb-6">Experience</h3>
+        </div>
+
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="bg-gray-700/50 rounded-xl p-6 border border-gray-600/50"
+              className="relative pl-8 border-1-2 border-gray-600"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="flex justify-between items-start mb-2">
-                <h4 className="text-white font-semibold">{exp.title}</h4>
-                <span className="text-gray-400 text-sm">{exp.period}</span>
+              {/* Blue dot indicator */}
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full border-2 border-gray-800"></div>
+              
+              <div className="space-y-3">
+                <div>
+ <h4 className="text-white font-semibold text-lg">
+                     <span className="text-blue-400">{exp.company}</span> as {exp.role}
+                                     </h4>
+                   <p className="text-gray-400 text-sm">{exp.period}</p>
+                 </div>
+                
+                <div className="space-y-2">
+                  {Array.isArray(exp.responsibility) ? (
+                    exp.responsibility.map((responsibility, respIndex) => (
+                    <p key={respIndex} className="text-gray-300 text-sm leading-relaxed">
+                      • {responsibility}
+                    </p>
+                  ))
+                ) : (
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    • {exp.responsibility}
+                  </p>
+                )}
+
+                </div>
+                
+                <p className="text-gray-500 text-sm italic">{exp.location}</p>
+               </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Education Section */}
+      <div className="space-y-6">
+        <div className="flex items-center gap-3 mb-6">
+          <BookOpen className="text-yellow-500" size={24} />
+          <h3 className="text-xl font-bold text-white">Education</h3>
+        </div>
+        
+        <div className="space-y-6">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              className="relative pl-8 border-l-2 border-gray-600"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: (experiences.length + index) * 0.1 }}
+            >
+              {/* Blue dot indicator */}
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full border-2 border-gray-800"></div>
+              
+              <div className="space-y-2">
+                <h4 className="text-blue-400 font-semibold">{edu.institution}</h4>
+                <p className="text-gray-400 text-sm">{edu.period}</p>
+                <p className="text-gray-300 text-sm">{edu.field}</p>
+                <p className="text-gray-500 text-sm italic">{edu.location}</p>
               </div>
-              <p className="text-blue-400 mb-2">{exp.company}</p>
-              <p className="text-gray-300 text-sm">{exp.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Nonformal Education Section */}
+      <div className="space-y-6">
+        <div className="flex items-center gap-3 mb-6">
+          <BookOpen className="text-yellow-500" size={24} />
+          <h3 className="text-xl font-bold text-white">Non-formal Education</h3>
+        </div>
+        
+        <div className="space-y-6">
+          {nonformalEducation.map((course, index) => (
+            <motion.div
+              key={index}
+              className="relative pl-8 border-l-2 border-gray-600"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: (experiences.length + education.length + index) * 0.1 }}
+            >
+              {/* Blue dot indicator */}
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full border-2 border-gray-800"></div>
+              
+              <div className="space-y-2">
+                <h4 className="text-blue-400 font-semibold">{course.institution}</h4>
+                <p className="text-gray-400 text-sm">{course.period}</p>
+                <p className="text-gray-300 text-sm">{course.course}</p>
+                <p className="text-gray-500 text-sm italic">{course.type}</p>
+              </div>
             </motion.div>
           ))}
         </div>
