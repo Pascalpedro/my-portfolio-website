@@ -118,7 +118,7 @@ export const Header = () => {
           transition={{ duration: 0.2 }}
         >
           <img 
-            src="/profile.jpg" 
+            src="/profile.png" 
             alt="Pascal Attama" 
             className="w-full h-full rounded-3xl object-cover border-4 border-blue-500"
           />
