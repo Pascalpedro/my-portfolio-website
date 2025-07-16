@@ -395,97 +395,60 @@ export const PortfolioPage = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'AWS Certified Cloud Practitioner',
+      title: 'FinOps Certified Practitioner',
+      issuer: 'FinOps Foundation',
       category: 'Certifications',
-      image: 'https://images.pexels.com/photos/8830665/pexels-photo-8830665.jpeg',
-      tags: ['Certified', 'Verify']
+      image: '/finops.jpg',
+      link: 'https://www.credly.com/badges/5e49abb3-6b74-4286-bb20-cdbb8a8ebc37/public_url',
+      tags: ['FinOps', 'Cloud', 'Cost-Optimization']
     },
     {
       id: 2,
-      title: 'DTS 2020 - CCNA Cybersecurity Operations',
+      title: 'McKinsey.org Forward Program',
+      issuer: 'McKinsey & Company',
       category: 'Certifications',
-      image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8Ymx1ZXwxNzUxNDAyMDc2fDA&ixlib=rb-4.1.0&q=85',
-      tags: ['Certificate']
+      image: '/McKinsey.jpg',
+      link: 'https://www.credly.com/badges/472f077d-007c-4af5-bbb1-963c1512bfd0',
+      tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
     },
     {
       id: 3,
-      title: 'Dicoding - Cloud Practitioner Essentials',
-      category: 'Certifications',
-      image: 'https://images.pexels.com/photos/8532850/pexels-photo-8532850.jpeg',
-      tags: ['Certificate']
+      title: 'Network Support and Security',
+      issuer: 'Cisco',
+      category: 'Badge',
+      image: '/NetSec.png',
+      link: 'https://www.credly.com/badges/3d33f23c-4c34-408e-9b21-5e172d6e3191/',
+      tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
     {
       id: 4,
-      title: 'Transletin Website',
-      category: 'Project',
-      image: 'https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxuZXR3b3JrJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHxibHVlfDE3NTE0MDIwODl8MA&ixlib=rb-4.1.0&q=85',
-      tags: ['Website']
+      title: 'Endpoint Security',
+      issuer: 'Cisco',
+      category: 'Badge',
+      image: '/EndpointSecurity.png',
+      link: 'https://www.credly.com/badges/82f7c4d1-f670-45d0-9a66-b0262c46bcff',
+      tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
-    
+
+    {
+      id: 5,
+      title: 'PedroOps - FinOps SaaS',
+      issuer: 'PedroOps',
+      category: 'Project',
+      image: '/PedroOps.png',
+      link: 'https://pedroops.com',
+      tags: ['Saas', 'Cost-Optimization','Cloud']
+    },
     {
       id: 6,
-      title: 'ThingsBin Web and Application IoT',
+      title: 'Custodia - Secured Web-app',
+      issuer: 'PedroOps',
       category: 'Project',
-      image: 'https://images.pexels.com/photos/7663144/pexels-photo-7663144.jpeg',
-      tags: ['Github']
+      image: '/custodia-logo.png',
+      link: 'https://github.com/Pascalpedro/Custodia',
+      tags: ['Microservice','Auth0', 'Ngrok', 'Nginx']
     },
-    {
-      id: 7,
-      title: 'CCNA Introduction to Networks',
-      category: 'Certifications',
-      image: 'https://images.pexels.com/photos/16053029/pexels-photo-16053029.jpeg',
-      tags: ['Verify']
-    },
-    {
-      id: 8,
-      title: 'NPM Card (npx adityacprtm)',
-      category: 'Project',
-      image: 'https://images.unsplash.com/photo-1660644808226-a5b2e691fc51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxjeWJlcnNlY3VyaXR5fGVufDB8fHxibHVlfDE3NTE0MDIxMDB8MA&ixlib=rb-4.1.0&q=85',
-      tags: ['Project']
-    },
-    {
-      id: 9,
-      title: 'Mini-link',
-      category: 'Project',
-      image: 'https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxjeWJlcnNlY3VyaXR5fGVufDB8fHxibHVlfDE3NTE0MDIxMDB8MA&ixlib=rb-4.1.0&q=85',
-      tags: ['Website', 'Github']
-    },
-    {
-      id: 10,
-      title: 'High-Availability Network Design',
-      category: 'Project',
-      image: 'https://images.unsplash.com/photo-1598149852075-62ed16a6edb2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxuZXR3b3JrJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHxibHVlfDE3NTE0MDIwODl8MA&ixlib=rb-4.1.0&q=85',
-      tags: ['Project']
-    },
-    {
-    id: 1,
-    title: 'PedroOps – FinOps SaaS',
-    category: 'Project',
-    image: 'https://yourdomain.com/pedroops-screenshot.jpg',
-    tags: ['FinOps', 'React', 'AWS']
-  },
-  {
-    id: 2,
-    title: 'Secure Flask Microservice',
-    category: 'Project',
-    image: 'https://yourdomain.com/flask-api.jpg',
-    tags: ['Auth0', 'Docker', 'AWS']
-  },
-  {
-    id: 3,
-    title: 'AWS Certified Cloud Practitioner',
-    category: 'Certifications',
-    image: 'https://yourdomain.com/aws-cert.jpg',
-    tags: ['Certification']
-  },
-  {
-    id: 4,
-    title: 'HCIA - Huawei Routing & Switching',
-    category: 'Certifications',
-    image: 'https://yourdomain.com/hcia.jpg',
-    tags: ['Networking']
-  }
-  ];
+    ];
 
   const filteredItems = activeFilter === 'All' 
     ? portfolioItems 
