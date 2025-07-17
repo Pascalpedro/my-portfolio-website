@@ -484,8 +484,11 @@ export const PortfolioPage = () => {
       {/* Portfolio Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map((item, index) => (
-          <motion.div
+          <motion.a
             key={item.id}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gray-700/50 rounded-xl overflow-hidden border border-gray-600/50 group cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -510,6 +513,7 @@ export const PortfolioPage = () => {
               <h3 className="text-white font-semibold mb-3 group-hover:text-blue-400 transition-colors">
                 {item.title}
               </h3>
+              <p className="text-gray-400 text-sm mb-3 italic">{item.issuer}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag, tagIndex) => (
                   <span 
@@ -521,7 +525,7 @@ export const PortfolioPage = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </motion.div>
