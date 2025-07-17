@@ -208,20 +208,36 @@ export const Header = () => {
           </div>
         </div>
         
-        <div className="flex gap-4">
+        <div className="mt-6 flex flex-col sm:flex-row gap-4">
           <a
             href="https://drive.google.com/file/d/159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_cv_clicked', {
+                  event_category: 'CV',
+                  event_label: 'View CV',
+                });
+              }
+            }}
+            className="bg-blue-600 text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-blue-700 transition"
           >
             👀 View CV
           </a>
           <a
             href="https://drive.google.com/uc?export=download&id=159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs"
-            onClick={(e) => e.stopPropagation()}
-            className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'download_cv_clicked', {
+                  event_category: 'CV',
+                  event_label: 'Download CV',
+                });
+               }
+            }}
+            className="bg-gray-700 text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-gray-600 transition"
           >
             ⬇️ Download CV
           </a>
