@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Modal from './Modal';
 import {
   User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
   Download, MapPin, Monitor, Cloud, Shield, Code, Filter
@@ -389,7 +390,7 @@ export const AboutPage = () => {
 // Portfolio Page Component
 export const PortfolioPage = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  
+  const [selectedItem, setSelectedItem] = useState(null);
   const filters = ['All', 'Certifications', 'Project', 'Badge'];
   
   const portfolioItems = [
@@ -486,9 +487,15 @@ export const PortfolioPage = () => {
         {filteredItems.map((item, index) => (
           <motion.a
             key={item.id}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              if (item.category === 'Certifications') {
+                window.open(item.link, '_blank');
+              } else {
+                setSelectedItem(item);
+              }
+            }}
             className="bg-gray-700/50 rounded-xl overflow-hidden border border-gray-600/50 group cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -524,10 +531,40 @@ export const PortfolioPage = () => {
                   </span>
                 ))}
               </div>
+              {(item.category !== 'Certifications') && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-block mt-2 text-sm text-blue-400 hover:underline"
+                  >
+                     🔗 View More
+                  </a>
+              )}
             </div>
           </motion.a>
         ))}
       </div>
+
+      {/* Modal Popup for Project or Badge */}
+      {selectedItem && (
+        <Modal onClose={() => setSelectedItem(null)}>
+          <div className="text-white p-4">
+            <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-64 object-cover rounded-lg mb-4" />
+            <h2 className="text-2xl font-bold mb-2">{selectedItem.title}</h2>
+            <p className="italic text-sm text-gray-400 mb-2">{selectedItem.issuer}</p>
+            <p className="text-gray-300 mb-4">{selectedItem.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {selectedItem.tags.map((tag, index) => (
+                <span key={index} className="bg-blue-600/20 text-blue-400 text-xs px-2 py-1 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          </Modal>
+        )}
     </motion.div>
   );
 };
