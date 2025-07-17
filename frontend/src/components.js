@@ -208,16 +208,24 @@ export const Header = () => {
           </div>
         </div>
         
-        <a 
-          href="/Pascal_Attama_CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all duration-200 font-medium"
-        >
-          <Download size={18} />
-          📄 Download CV
-        </a>
+        <div className="flex gap-4">
+          <a
+            href="https://drive.google.com/file/d/159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            👀 View CV
+          </a>
+          <a
+            href="https://drive.google.com/uc?export=download&id=159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs"
+            onClick={(e) => e.stopPropagation()}
+            className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
+          >
+            ⬇️ Download CV
+          </a>
+        </div>
       </div>
     </motion.div>
   );
