@@ -894,6 +894,8 @@ export const ContactPage = () => {
       setStatus("Please fill out all fields ❗");
       return;
     }
+    
+    setStatus("Sending...");
 
     try {
         const res = await axios.post(

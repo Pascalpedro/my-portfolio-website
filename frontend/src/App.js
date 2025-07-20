@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import { 
   Header, 
@@ -46,7 +48,7 @@ function App() {
         return <AboutPage />;
     }
   };
-
+  
   return (
     <div className="App min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <GeometricBackground />
