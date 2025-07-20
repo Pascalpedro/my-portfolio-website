@@ -889,6 +889,11 @@ export const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("Please fill out all fields ❗");
+      return;
+    }
 
     try {
         const res = await axios.post(
