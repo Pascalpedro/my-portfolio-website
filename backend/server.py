@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
@@ -10,6 +10,7 @@ from typing import List
 import uuid
 from datetime import datetime
 from contextlib import asynccontextmanager
+
 
 # Load environment variables
 ROOT_DIR = Path(__file__).parent
@@ -46,6 +47,13 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+# Contact Form API Endpoint
+class ContactMessage(BaseModel):
+    name: str
+    email: str
+    message: str
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
 # API routes
 @api_router.get("/")
 async def root():
@@ -62,6 +70,11 @@ async def create_status_check(input: StatusCheckCreate):
 async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
+
+@api_router.post("/contact", response_model=ContactMessage)
+async def submit_contact(message: ContactMessage):
+    await db.contact_messages.insert_one(message.dict())
+    return message
 
 # Register router
 app.include_router(api_router)

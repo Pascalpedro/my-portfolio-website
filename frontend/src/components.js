@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from './Modal';
+import axios from 'axios';
 import {
   User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
   Download, MapPin, Monitor, Cloud, Shield, Code, Filter
@@ -880,7 +881,28 @@ export const BlogPage = () => {
 };
 
 // Contact Page Component
+
 export const ContactPage = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  
+  const [status, setStatus] = useState(null); // For success/error message
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        const res = await axios.post(
+          `${process.env.REACT_APP_BACKEND_URL}/api/contact`, 
+          formData
+        );
+      setStatus('Message sent successfully ✅');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      setStatus('Failed to send message..... Something went wrong!!! ❌');
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -905,6 +927,7 @@ export const ContactPage = () => {
         </div>
         
         <motion.form 
+          onSubmit={handleSubmit}
           className="space-y-4"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -913,16 +936,22 @@ export const ContactPage = () => {
           <input
             type="text"
             placeholder="Your Name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
           />
           <input
             type="email"
             placeholder="Your Email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
           />
           <textarea
             placeholder="Your Message"
             rows={5}
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
           ></textarea>
           <motion.button
@@ -934,6 +963,12 @@ export const ContactPage = () => {
             Send Message
           </motion.button>
         </motion.form>
+
+        {status && (
+          <p className="text-sm text-center text-blue-400 mt-4">
+            {status}
+          </p>
+        )}
       </div>
     </motion.div>
   );
