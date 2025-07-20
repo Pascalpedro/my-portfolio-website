@@ -10,6 +10,7 @@ from typing import List
 import uuid
 from datetime import datetime
 from contextlib import asynccontextmanager
+from email_utils import send_email_alert
 
 
 # Load environment variables
@@ -74,6 +75,10 @@ async def get_status_checks():
 @api_router.post("/contact", response_model=ContactMessage)
 async def submit_contact(message: ContactMessage):
     await db.contact_messages.insert_one(message.dict())
+
+    # ✅ Trigger email alert
+    send_email_alert(message.name, message.email, message.message)
+    
     return message
 
 # Register router
