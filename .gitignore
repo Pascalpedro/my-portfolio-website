@@ -5,9 +5,28 @@
 bkb/
 bkp/
 
+# Environment variables
+sendgrid.env
+.env
+.env.*
+*.env
+flask_env/
+frontend/.env*
+
 # IDE and editors
 .idea/
 .vscode/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+.pytest_cache
+*.pyc
+*pyc*
+*.pyo
+*.pyd
+.Python
+
 
 # Dependencies
 node_modules/
@@ -35,27 +54,52 @@ next-env.d.ts
 dist/
 dist
 
+# Certbot
+data/certbot/
+
 # Environment files (comprehensive coverage)
 
 *token.json*
 *credentials.json*
 
 # Logs and debug files
+*.log
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 dump.rdb
 
-# System files
+# OS generated files
 .DS_Store
-*.pem
+Thumbs.db
+ehthumbs.db
+*~ 
 
-# Python
-__pycache__/
-*pyc*
+# Secrets and key files
+*.pem
+*.crt
+*.key
+*.csr
+
+# Virtual Environment
 venv/
 .venv/
+
+# Nginx cert and cache
+/etc/letsencrypt/
+/data/certbot/conf/
+/data/certbot/www/
+
+# Database files
+*.db
+
+# Node / React (if frontend added)
+node_modules/
+build/
+dist/
+npm-debug.log
 
 # Development tools
 chainlit.md
@@ -83,4 +127,11 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ .emergent
-frontend/.env*
+
+# Others
+.emergent
+*.bak
+*.swp
+*.swo
+*.swn
+.cache.envfrontend/.env
