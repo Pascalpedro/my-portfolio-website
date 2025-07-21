@@ -4,7 +4,10 @@ services:
     env: python
     region: oregon
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
+    buildCommand: |
+      python -m ensurepip --upgrade
+      pip install --upgrade pip
+      pip install -r backend/requirements.txt
     startCommand: uvicorn server:app --host=0.0.0.0 --port=10000
     workingDir: backend
     autoDeploy: true
