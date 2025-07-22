@@ -430,6 +430,15 @@ export const PortfolioPage = () => {
     },
     {
       id: 2,
+      title: 'Pascalpedro - My GitHub Proflie',
+      issuer: 'GitHub',
+      category: 'Project',
+      image: '/github.png',
+      link: 'https://github.com/Pascalpedro/Pascalpedro',
+      tags: ['GitHub','CI/CD', 'Git', 'Markdown']
+    },
+    {
+      id: 3,
       title: 'McKinsey.org Forward Program',
       issuer: 'McKinsey & Company',
       category: 'Certifications',
@@ -438,7 +447,7 @@ export const PortfolioPage = () => {
       tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
     },
     {
-      id: 3,
+      id: 4,
       title: 'Network Support and Security',
       issuer: 'Cisco',
       category: 'Badge',
@@ -447,7 +456,7 @@ export const PortfolioPage = () => {
       tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
     {
-      id: 4,
+      id: 5,
       title: 'Endpoint Security',
       issuer: 'Cisco',
       category: 'Badge',
@@ -457,7 +466,7 @@ export const PortfolioPage = () => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: 'PedroOps - FinOps SaaS',
       issuer: 'PedroOps',
       category: 'Project',
@@ -466,13 +475,22 @@ export const PortfolioPage = () => {
       tags: ['Saas', 'Cost-Optimization','Cloud']
     },
     {
-      id: 6,
+      id: 7,
       title: 'Custodia - Secured Web-app',
       issuer: 'PedroOps',
       category: 'Project',
       image: '/custodia-logo.png',
       link: 'https://github.com/Pascalpedro/Custodia',
       tags: ['Microservice','Auth0', 'Ngrok', 'Nginx']
+    },
+    {
+      id: 8,
+      title: 'My-Portfolio - A Fullstack Project',
+      issuer: 'PedroOps',
+      category: 'Project',
+      image: '/portfolio.png',
+      link: 'https://github.com/Pascalpedro/my-portfolio-website',
+      tags: ['React','FastAPI', 'MongoDB']
     },
     ];
 

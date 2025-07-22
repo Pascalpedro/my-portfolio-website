@@ -5,9 +5,9 @@ services:
     region: oregon
     plan: free
     buildCommand: |
-      python -m ensurepip --upgrade
-      pip install --upgrade pip
-      pip install -r backend/requirements.txt
+      python3 -m ensurepip --upgrade
+      python3 -m pip install --upgrade pip
+      python3 -m pip install --no-cache-dir -r backend/requirements.txt
     startCommand: uvicorn server:app --host=0.0.0.0 --port=10000
     workingDir: backend
     autoDeploy: true
