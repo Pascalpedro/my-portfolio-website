@@ -165,5 +165,6 @@ We welcome contributions! Please follow these steps:
 ## 📬 Contact
 - **Pascal Attama** 
 - **Email: Attamapascalpedro@gmail.com**
-- **Website: https://pascalattama.netlify.app/**
-- **GitHub: [@Pascalpedro](https://github.com/Pascalpedro) 
+- **Portfolio: https://pascalattama.netlify.app/**
+- **Website: https://pedroops.com**
+- **GitHub: [@Pascalpedro](https://github.com/Pascalpedro)**
