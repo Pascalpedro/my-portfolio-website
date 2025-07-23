@@ -2,6 +2,8 @@
 
 A modern, responsive full-stack portfolio website built with **React.js** (frontend), **FastAPI** (backend), and **MongoDB** (database), showcasing projects, certifications, and professional experience. This portfolio also integrates Google Drive-hosted CV viewing and downloading, along with real-time click analytics via Google Analytics 4 (GA4).
 
+![Portfolio Overview](frontend/public/portfolio.png)
+
 ---
 
 ## 📌 Features
