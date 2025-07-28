@@ -854,17 +854,23 @@ export const ResumePage = () => {
 export const BlogPage = () => {
   const blogPosts = [
     {
-      title: 'Getting Started with Kubernetes',
-      excerpt: 'A comprehensive guide to container orchestration...',
-      date: '2024-01-15',
-      readTime: '5 min read'
+      id: 1,
+      title: 'Stepping into Ubuntu...',
+      summary: 'How to Setup Ubuntu Linux on a VirtualBox...',
+      date: '2024-05-17',
+      link: 'https://medium.com/@attamapascalpedro/how-to-setup-ubuntu-linux-on-a-virtualbox-edd9ca9fe5ff',
+      image: '/blog-ubuntu.PNG',
+      tags: ["Linux", "Ubuntu","Virtualization"],
     },
     {
-      title: 'AWS Best Practices for DevOps',
-      excerpt: 'Essential tips for managing cloud infrastructure...',
-      date: '2024-01-10',
-      readTime: '7 min read'
-    }
+      id: 2,
+      title: 'My Full-Stack Cloud Portfolio…',
+      summary: 'Combining React + FastAPI + MongoDB with CI/CD and cloud hosting practices!!!...',
+      date: '2025-07-25',
+      link: 'https://medium.com/@attamapascalpedro/building-my-portfolio-with-react-fastapi-mongodb-a-full-stack-walkthrough-1d626633f67f',
+      image: '/blog-portfolio.PNG',
+      tags: ["Cloud", "FastAPI-Python", "React-NodeJS"],
+    },
   ];
 
   return (
@@ -872,28 +878,70 @@ export const BlogPage = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      className="space-y-8"
     >
-      <h2 className="text-3xl font-bold text-white mb-8">Blog</h2>
-      
-      <div className="space-y-6">
+      <h2 className="text-3xl font-bold text-white mb-6">Blog</h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post, index) => (
-          <motion.article
-            key={index}
-            className="bg-gray-700/50 rounded-xl p-6 border border-gray-600/50 hover:bg-gray-700/70 transition-colors cursor-pointer"
+          <motion.div
+            key={post.id}
+            className="bg-gray-700/50 rounded-xl overflow-hidden border border-gray-600/50 group cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.02, y: -5 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-2">{post.title}</h3>
-            <p className="text-gray-300 mb-4">{post.excerpt}</p>
-            <div className="flex justify-between items-center text-sm text-gray-400">
-              <span>{post.date}</span>
-              <span>{post.readTime}</span>
-            </div>
-          </motion.article>
-        ))}
-      </div>
+            {/* Blog Thumbnail */}
+            <div className="relative overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+             <div className="absolute top-4 left-4">
+               <span className="bg-green-600 text-white text-xs px-2 py-1 rounded">
+                 Blog
+               </span>
+             </div>
+           </div>
+
+           {/* Content Section */}
+           <div className="p-6">
+             <h3 className="text-white font-semibold mb-2 group-hover:text-blue-400 transition-colors">
+               {post.title}
+             </h3>
+             <p className="text-gray-400 text-sm mb-2 italic">
+               {new Date(post.date).toDateString()}
+             </p>
+             <p className="text-gray-300 text-sm mb-4">{post.summary}</p>
+  
+             {/* tags */}
+             <div className="flex flex-wrap gap-2 mb-4">
+               {post.tags.map((tag, tagindex) => (
+                 <span
+                   key={tagindex}
+                   className="bg-blue-600/20 text-blue-400 text-xs px-2 py-1 rounded"
+                 >
+                   {tag}
+                 </span>
+               ))}
+             </div>
+
+             {/* Read More Link */}
+             <a
+               href={post.link}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-sm text-blue-400 hover:underline"
+             >
+                🔗 Read More
+             </a>
+           </div>
+         </motion.div>
+       ))}
+     </div>
     </motion.div>
   );
 };
