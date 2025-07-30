@@ -1,8 +1,12 @@
 [phases.setup]
-nixPkgs = ["python312", "pip", "gcc"]
+nixPkgs = ["python312Full", "gcc"]
 
 [phases.install]
-cmds = ["pip install --upgrade pip", "pip install --no-cache-dir -r requirements.txt"]
+cmds = [
+  "python3 -m ensurepip --upgrade",
+  "python3 -m pip install --upgrade pip",
+  "python3 -m pip install --no-cache-dir -r requirements.txt"
+]
 
 [start]
 cmd = "python3 -m uvicorn server:app --host 0.0.0.0 --port ${PORT}"
