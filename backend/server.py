@@ -89,7 +89,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
     allow_origins=[
-        ""http://localhost:3000",
+        "http://localhost:3000",
         "https://pascalattama.netlify.app"
     ],
     allow_methods=["*"],
