@@ -59,16 +59,19 @@ my-portfolio-websites
 │    ├── Modal.js # Custom modal popup
 │ ├── package.json
 │ ├── craco.config.js
+│ ├── netlify.toml
+│ ├── Dockerfile #Frontend Dockerfile
 │ └── ...
 ├── backend #FastAPI backend
 │ ├── server.py # Main FastAPI app
 │ ├── email_utils.py  # Optional: contact email handler
 │ │── .env # MongoDB URI, etc.
 │ ├── venv/ #Virtual Env
+│ ├── Dockerfile  # Backend Dockerfile
 │ └── requirements.txt # Python dependencies
 │── nginx.conf
 ├── .gitignore
-├── Dockerfile
+├── render.yaml
 │── docker-compose.yml
 └──  README.md
 ```
