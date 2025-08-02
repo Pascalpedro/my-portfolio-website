@@ -4,7 +4,7 @@ import Modal from './Modal';
 import axios from 'axios';
 import {
   User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
-  Download, MapPin, Monitor, Cloud, Shield, Code, Filter
+  Download, MapPin, Monitor, Cloud, Sliders, Shield, ShieldCheck, DollarSign, ClipboardCheck, Code, Filter
 } from 'lucide-react';
 
 // Geometric Background Component
@@ -129,9 +129,9 @@ export const Header = () => {
         
         <h1 className="text-2xl font-bold text-white mb-2">Pascal Attama</h1>
         <p className="text-gray-400 text-sm mb-6 bg-gray-700/50 rounded-full px-4 py-2 inline-block">
-          Cloud Engineer | DevOps | FinOps
+          Cloud Security & FinOps Consultant
         </p>
-        
+
         <div className="flex justify-center space-x-2 mb-6">
           <motion.a
             href="https://github.com/Pascalpedro"
@@ -291,35 +291,41 @@ export const Sidebar = ({ currentPage, setCurrentPage }) => {
 export const AboutPage = () => {
   const services = [
     {
+      icon: ShieldCheck,
+      title: 'Cloud Security',
+      description: 'I secure cloud environments by implementing IAM best practices, encryption, GuardDuty, and audit logging to ensure compliance and reduce risk.'
+    },
+    {
+      icon: DollarSign,
+      title: 'FinOps',
+      description: 'I optimize and reduce cloud spend through visibility, budgeting, tagging strategies, and cost forecasting using tools like AWS Budgets and Cost Explorer.'
+    },
+    {
+      icon: Sliders,
+      title: 'Cloud Governance',
+      description: 'I align cloud operations with security and cost controls by designing policies for identity, access, tagging, and budgeting across teams and accounts.'
+    },
+    {
       icon: Cloud,
       title: 'Cloud Engineer',
       description: 'I design, deploy and maintain scalable, secure and cost-effective cloud infrastructure and application'
     },
     {
-      icon: Monitor,
-      title: 'DevOps',
-      description: 'I enjoy to improve the speed and quality of delivery, automate and achieve CI/CD'
-    },
-    {
-      icon: Monitor,
-      title: 'FinOps',
-      description: 'I enjoy optimizing and reducing cloud spend through visibility,automation, and architectural best practices'
-    },
-    {
-      icon: Shield,
-      title: 'Infrastructure Security',
-      description: 'I implement IAM, security groups, VPC flow logs, and GuardDuty to secure AWS environments'
+      icon: ClipboardCheck,
+      title: 'Cloud Audit & Compliance',
+      description: 'I perform cloud audits and generate compliance reports based on industry benchmarks like CIS AWS Foundations and SOC2 readiness.'
     },
     {
       icon: Code,
       title: 'Infrastructure as Code',
-      description: 'I enjoy automating cloud provisioning using Terraform and Ansible for consistent deployment'
+      description: 'I automate secure and repeatable infrastructure deployment using Terraform and CI/CD pipelines to enforce best practices at scale.'
     }
   ];
 
   const clients = [
-    { name: 'Upwork', logo: '🔤' },
-    { name: 'Linkedln', logo: '😊' }
+    { name: 'Trakatel', logo: '✅' },
+    {name: 'Upwork', logo: '🎯'},
+    { name: 'Linkedln', logo: '🔤' }
   ];
 
   return (
@@ -333,25 +339,24 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I'm a results-driven Cloud Engineer with a strong background in cloud architecture,
-            automation, networking, and FinOps. 
+            I'm a <strong>cloud Security & FinOps Consultant</strong> based in Nigeria. I specialize in helping businesses secure their cloud environments while optimizing their AWS or Azure costs. 
           </p>
           <p>
-            I have experience working with Cloud services, Infrastructure as Code (IaC), and cloud security tools, with a track record of optimizing cloud infrastructure, 
-            reducing operational costs, and improving system scalability. 
-            I have led cloud deployments and migrations on the AWS and various cloud infrastructure. 
-            I optimize AWS infrastructure to reduce costs, enhanced efficiency, automated and delivered resilient deployments by leveraging tools such as Terraform, Ansible, Docker, Kubernetes, and Python.
-          </p>         
-          <p>
-            With a Bachelor's degree in Physics & Astronomy from the University of Nigeria, it sharpened my analytical thinking, data analysis, and problem-solving skills. 
-            These strengths empowers me as a Cloud Engineer to tackle complex infrastructure challenges, apply evidence-based decisions, and build efficient, scalable systems that drive innovation across disciplines. 
-            I am committed to continuous learning and professional 
-            growth. 
+            With a background in cloud networking and a strong focus on governance, I bring a <strong>unique blend of technical insight and financial accountability</strong> to cloud operations. 
+            Whether you're a <strong>startup scaling fast or an enterprise managing complex multi-account infrastructure,</strong> I can help you:
           </p>
-          <p>
-            I am passionate about bridging the gaps between business and technology by building resilient cloud solutions and mentoring teams to drive cloud adoption and innovation.
-            I am seeking opportunities to leverage my skills and contribute to the success of Cloud, FinOps and DevOps projects for organizational's sucess.
+
+          <ul>
+            <li>🔐 Implement secure IAM and compliance-ready configurations...</li>
+            <li>💰 Reduce your cloud spend with tagging, budget alerts, and automation...</li>
+            <li>📊 Build dashboards and reporting for both security and cost visibility...</li>
+          </ul>
+
+          <p>I'm passionate about cloud governance, automation, and helping businesses get the <strong>most value from their cloud investment</strong> — without sacrificing security.
           </p>
+
+          <p>Let’s make your cloud infrastructure <strong>secure, efficient, and audit-ready</strong>.</p>
+
         </div>
       </div>
 
@@ -690,13 +695,22 @@ export const ResumePage = () => {
   ];  
 
   const skills = [
-    { name: 'AWS & Cloud Architecture', level: "Intermediate" },
+
+    { name: 'AWS & Cloud Architecture', level: 'Advanced' },
     { name: 'Linux', level: "Advanced" },
-    { name: 'Terraform & Ansible', level: "Intermediate" },
-    { name: 'Docker & Kubernetes', level: "Intermediate" },
+    { name: 'Cloud Security & AWS IAM', level: 'Advanced' },
+    { name: 'FinOps & Cost Optimization', level: 'Advanced' },
+    { name: 'AWS Budgets & Cost Explorer', level: 'Intermediate' },
+    { name: 'AWS GuardDuty & KMS', level: 'Intermediate' },
+    { name: 'AWS Config & Cloud Audit', level: 'Intermediate' },
+    { name: 'Security Hardening & Governance', level: 'Intermediate' },
+    { name: 'Terraform & Ansible', level: 'Intermediate' },
+    { name: 'Cloud Cost Monitoring', level: 'Intermediate' },
+    {name:  'JSON & YAML', level: 'Intermediate'},
+    { name: 'Docker & K8s', level: "Intermediate" },
     { name: 'IP Networks & VPCs', level: "Intermediate" },
-    { name: 'Git', level: "Intermediate" },
-    { name: 'Python & Bash Scripting', level: "Intermediate" },
+    { name: 'Git & GitHub', level: "Intermediate" },
+    { name: 'Python & Bash', level: "Intermediate" },
     
   ];
 
@@ -713,8 +727,6 @@ export const ResumePage = () => {
         ></div>
       </div>
     </div>
-  
-    
   
   );
 
