@@ -406,10 +406,7 @@ export const AboutPage = () => {
         </div>
         
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">
-            All systems are operational. 
-            <span className="text-green-400 mx-1">online</span> | 
-            <span className="text-green-400 mx-1">uptime</span>
+          <p className="text-gray-100 text-sm">&copy; {new Date().getFullYear()} PedroOps — All rights reserved.
           </p>
         </div>
       </div>
