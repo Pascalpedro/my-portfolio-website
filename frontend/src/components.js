@@ -354,8 +354,10 @@ export const AboutPage = () => {
 
           <p>I'm passionate about cloud governance, automation, and helping businesses get the <strong>most value from their cloud investment</strong> — without sacrificing security.
           </p>
-
-          <p>Let’s make your cloud infrastructure <strong>secure, efficient, and audit-ready</strong>.</p>
+          
+          <p>🤝 Let's bridge the gaps between your <strong>business and technology... 💼</strong></p>
+          
+          <p>🚀 Let’s make your cloud infrastructure <strong>secure, efficient, and audit-ready</strong>.</p>
 
         </div>
       </div>
