@@ -665,7 +665,7 @@ export const ResumePage = () => {
       location: 'Lagos, Nigeria',
       responsibility: [
         'Designed and deployed secure, high-performance L1–L3 network infrastructures using Cisco, MikroTik, and Huawei devices, implementing BGP, OSPF, VLANs, and network segmentation best practices.',
-        'Delivered Tier-2 technical support with a 95% first-call resolution rate and reduced network resolution time, while leading enterprise network upgrades and wireless LAN deployments.',
+        'Delivered Tier-2 network technical support with a 95% first-call resolution rate and reduced network resolution time, while leading enterprise network upgrades and wireless LAN deployments.',
         'Conducted detailed network surveys and simulations with Pathloss, Lucidchart, and GNS3 to ensure accurate design and successful implementation.'
       ]  
     }
