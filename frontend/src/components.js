@@ -339,25 +339,33 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I'm a <strong>cloud Security & FinOps Consultant</strong> based in Nigeria. I specialize in helping businesses secure their cloud environments while optimizing their AWS or Azure costs. 
+            I'm Pascal Attama — a <strong>cloud Security & FinOps Consultant</strong> helping businesses secure their cloud environments while maximizing every dollar spent. 
+            I work with AWS, Azure, and hybrid cloud environments to design cloud infrastructures that are secure, cost-optimized, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps. 
           </p>
           <p>
-            With a background in cloud networking and a strong focus on governance, I bring a <strong>unique blend of technical insight and financial accountability</strong> to cloud operations. 
-            Whether you're a <strong>startup scaling fast or an enterprise managing complex multi-account infrastructure,</strong> I can help you:
+            With a background in cloud networking and a strong focus on governance, I bring a <strong>unique blend of technical insight and financial accountability</strong> to cloud operations, and I have a proven track record of:
           </p>
 
           <ul>
-            <li>🔐 Implement secure IAM and compliance-ready configurations...</li>
-            <li>💰 Reduce your cloud spend with tagging, budget alerts, and automation...</li>
-            <li>📊 Build dashboards and reporting for both security and cost visibility...</li>
+            <li>💰 Cutting AWS costs through tagging strategies, budgets, automation, and proactive monitoring.</li>
+            <li>🔐 Hardening security with IAM policies, compliance-ready configurations, and best practices.</li>
+            <li>🔄 Automating infrastructure with Terraform & Ansible for faster, consistent deployments.</li>
+            <li>📊 Build dashboards and reporting for both security and cost visibility.</li>
+            <li>💼 Enforcing cloud governance frameworks that align with corporate and regulatory standards....</li>
           </ul>
 
-          <p>I'm passionate about cloud governance, automation, and helping businesses get the <strong>most value from their cloud investment</strong> — without sacrificing security.
+          <p>Whether you need a <strong>one-time AWS cost audit, you’re a startup scaling fast, need an end-to-end cloud infrastructure management, an enterprise managing complex multi-account setups, or a business needing cloud cost visibility,</strong> I can help you:
           </p>
           
+          <ul>
+            <li>✅ Lock down your environment against risks</li>
+            <li>✅ Control and predict your AWS spend </li>
+            <li>✅ Build infrastructure that’s secure, efficient, and audit-ready </li>
+          </ul>
+
           <p>🤝 Let's bridge the gaps between your <strong>business and technology... 💼</strong></p>
           
-          <p>🚀 Let’s make your cloud infrastructure <strong>secure, efficient, and audit-ready</strong>.</p>
+          <p>🚀 Let’s make your cloud infrastructure <strong>secure, efficient, and financially sustainable.</strong>.</p>
 
         </div>
       </div>
@@ -634,13 +642,9 @@ export const ResumePage = () => {
       period: '2022 - Present',
       location: 'Lagos, Nigeria',
       responsibility: [
-        'Designs and deploys scalable AWS infrastructure using VPCs, EC2, S3, IAM, RDS, and Load Balancers, ensuring high availability and led network infrastructure migration to AWS for hybrid cloud connectivity, improving agility and reducing operational costs.',
-        'Optimizes AWS cost management by leveraging AWS Cost Explorer, AWS Budgets, and CloudWatch, proactively identify significant saving opportunities, reducing cloud expenses by 30%.',
-        'Streamlines and automate infrastructure deployment using Terraform and Ansible, reducing manual errors and provisioning time and increased efficiency by 20%.',
-        'Manages containerized network env and apps with Docker, Amazon ECS, Kubernetes (EKS) and VMware infra using the SDN arch model improving resource utilization and scalability.',
-        'Enhanced cloud security by implementing IAM roles, Security Groups, VPC Flow Logs, AWS GuardDuty, and implement network best practices and security protocols for robust operations.',
-        'Enhances network monitoring for faster incident response using CloudWatch, SNS, Nagios, Nmap, and Wireshark, and increased network efficiency through regular audits and optimization.',
-        'Led training sessions and mentorship programs to educate junior engineers on cloud best practices, fostering their professional development while documenting knowledge for training and sharing.'
+        'Designs and deploys secure, scalable AWS infrastructure, integrating hybrid-cloud connectivity while optimizing costs through FinOps best practices.',
+        'Automates provisioning with Terraform and Ansible, improved container orchestration with Docker, ECS, and EKS, and strengthened cloud security with IAM, GuardDuty, and compliance frameworks.',
+        'Delivers faster incident response with enhanced monitoring while mentoring teams to adopt cloud best practices.'
       ]
     },
     {
@@ -649,13 +653,9 @@ export const ResumePage = () => {
       period: '2020 - 2022',
       location: 'Lagos, Nigeria',
       responsibility: [
-        'Reduced MTTR metric with Tier-2 support and provided clear, concise technical support to cross-functional teams via email, CRM tools and phone, resolving one-third of issues on first contact.',
-        'Automated ticket creation and updates with cross-functional teams via Zendesk CRM to improve internal system integration and reduced customer churn by implementing automated workflows.',
-        'Optimized Auto-Scaling configurations for customer deployments, ensuring dynamic resource allocation and reducing downtime due to CPU/memory exhaustion.',
-        'Worked with development teams to resolve serverless architecture issues, optimizing compute resources and application response times.',
-        'Configured and maintained container-based PAAS environments, reducing system failures by 20% through preventive maintenance.',
-        'Created and deployed CronJob automation scripts to handle routine maintenance requests such as log analysis, backups, and resource scaling',
-        'Created detailed troubleshooting documentation and internal Knowledge Base using MkDocs and Confluence, improving knowledge-sharing and reducing support time and escalations for future users.'
+        'Provided Tier-2 technical support and Linux/Network administration, resolving 33% of issues on first contact and reducing MTTR across hybrid environments.',
+        'Automated maintenance, scaling, and deployments using Bash, CronJobs, and serverless optimizations, improving efficiency by 25% and minimizing downtime. ',
+        'Developed knowledge bases and documentation that streamlined troubleshooting and reduced escalations for long-term operational gains.'
       ] 
     },
     {
@@ -664,12 +664,9 @@ export const ResumePage = () => {
       period: '2016 - 2020',
       location: 'Lagos, Nigeria',
       responsibility: [
-        'Implemented scalable L1, L2 and L3 network infrastructures with Cisco, MikroTik and Huawei routers, switches and other network devices using the TCP/IP model, BGP and OSPF routing protocols.',
-        'Implemented a centralized wireless LAN solution, improving network coverage and user experience.',
-        'Configured VLANs, VXLANs, STP/RSTP, and implemented network best practices and security policies for secure network segmentation for robust operations.',
-        'Reduced network resolution time by 20% with Tier-2 support, led enterprise network service deployments for MTN, and delivered successful network expansions and upgrades on schedule.',
-        'Achieved a 95% first-call resolution for user network issues.',
-        'Conducted a thorough pre-implementation analysis and TSS Network Survey with Pathloss, Lucid chart and GNS3 for accurate planning.'
+        'Designed and deployed secure, high-performance L1–L3 network infrastructures using Cisco, MikroTik, and Huawei devices, implementing BGP, OSPF, VLANs, and network segmentation best practices.',
+        'Delivered Tier-2 technical support with a 95% first-call resolution rate and reduced network resolution time, while leading enterprise network upgrades and wireless LAN deployments.',
+        'Conducted detailed network surveys and simulations with Pathloss, Lucidchart, and GNS3 to ensure accurate design and successful implementation.'
       ]  
     }
   ];
