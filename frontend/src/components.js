@@ -129,7 +129,7 @@ export const Header = () => {
         
         <h1 className="text-2xl font-bold text-white mb-2">Pascal Attama</h1>
         <p className="text-gray-400 text-sm mb-6 bg-gray-700/50 rounded-full px-4 py-2 inline-block">
-          Cloud Security & FinOps Consultant
+          Cloud Security & FinOps Specialist
         </p>
 
         <div className="flex justify-center space-x-2 mb-6">
@@ -190,7 +190,7 @@ export const Header = () => {
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">EMAIL</span>
             <a 
-              href="mailto:attamapascalpedro@gmail.com" 
+              href="mailto:pascal.attama@pedroops.com" 
               className="text-blue-400 hover:underline transition duration-200"
             >
                Send Email ✉
@@ -998,7 +998,7 @@ export const ContactPage = () => {
           <div className="space-y-4 text-gray-300">
             <div className="flex items-center gap-3">
               <Mail className="text-blue-400" size={20} />
-              <span>attamapascalpedro@gmail.com</span>
+              <span>pascal.attama@pedroops.com</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-blue-400" size={20} />
