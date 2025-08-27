@@ -339,7 +339,7 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I'm Pascal Attama — a <strong>cloud Security & FinOps Consultant</strong> helping businesses secure their cloud environments while maximizing every dollar spent. 
+            I'm Pascal Attama — a <strong>cloud Security & FinOps Engineer</strong> helping businesses secure their cloud environments while maximizing every dollar spent. 
             I work with AWS, Azure, and hybrid cloud environments to design cloud infrastructures that are secure, cost-optimized, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps. 
           </p>
           <p>
