@@ -1,0 +1,71 @@
+name: Deploy React App to S3 + CloudFront
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write    # Required for OIDC
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: pedroops
+  CF_DISTRIBUTION_ID: E4KJW8K8J9UIL
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      # 3. Install dependencies & build React
+      - name: Install dependencies & build
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      # 4. Configure AWS credentials (OIDC)
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::061039776803:role/GitHubActionsOIDC-PedroOps
+          aws-region: ${{ env.AWS_REGION }}
+
+      # 5. Sync build folder to S3
+      - name: Sync to S3
+        run: |
+          aws s3 sync ./frontend/build s3://${{ env.S3_BUCKET }} --delete --exact-timestamps
+
+       # 6. Optional: make index.html less cachey (recommended for SPAs)
+      - name: Set Cache-Control for index.html
+        run: |
+          aws s3 cp s3://${{ env.S3_BUCKET }}/index.html /tmp/index.html
+          aws s3 cp /tmp/index.html s3://${{ env.S3_BUCKET }}/index.html \
+            --cache-control "no-cache, no-store, must-revalidate" \
+            --content-type "text/html" \
+            --metadata-directive REPLACE
+
+      # 7. Invalidate CloudFront cache
+      - name: Invalidate CloudFront cache
+        run: |
+         aws cloudfront create-invalidation \
+          --distribution-id ${{ env.CF_DISTRIBUTION_ID }} \
+          --paths "/*"
+
+      # 8. Notify
+      - name: Deployment complete
+        run: echo "🚀 Deployed pedroops.com from frontend/ via OIDC!"
