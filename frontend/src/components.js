@@ -301,14 +301,14 @@ export const AboutPage = () => {
       description: 'I optimize and reduce cloud spend through visibility, budgeting, tagging strategies, and cost forecasting using tools like AWS Budgets and Cost Explorer.'
     },
     {
+      icon: Cloud,
+      title: 'Solution Architect',
+      description: 'I design, implement and maintain scalable, secure and cost-optimized cloud architectures that align with business goals and industry best practices.'
+    },
+    {
       icon: Sliders,
       title: 'Cloud Governance',
       description: 'I align cloud operations with security and cost controls by designing policies for identity, access, tagging, and budgeting across teams and accounts.'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Engineer',
-      description: 'I design, deploy and maintain scalable, secure and cost-effective cloud infrastructure and application'
     },
     {
       icon: ClipboardCheck,
@@ -339,34 +339,33 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I'm Pascal Attama — a <strong>cloud Security & FinOps Engineer</strong> helping businesses secure their cloud environments while maximizing every dollar spent. 
-            I work with AWS, Azure, and hybrid cloud environments to design cloud infrastructures that are secure, cost-optimized, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps. 
+            I'm Pascal Attama — a <strong>cloud Security & FinOps Engineer</strong> who helps businesses design, secure, and optimize cloud environments while ensuring financial efficiency. 
+            I work across AWS, Azure, and hybrid cloud infrastructures, delivering solutions that are secure, cost-effective, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps. 
           </p>
           <p>
-            With a background in cloud networking and a strong focus on governance, I bring a <strong>unique blend of technical insight and financial accountability</strong> to cloud operations, and I have a proven track record of:
+            With a background in cloud networking and governance, I bring a <strong>blend of technical expertise and strategic insight</strong> to cloud operations, helping organizations achieve measurable results:
           </p>
 
           <ul>
-            <li>💰 Cutting AWS costs through tagging strategies, budgets, automation, and proactive monitoring.</li>
-            <li>🔐 Hardening security with IAM policies, compliance-ready configurations, and best practices.</li>
+            <li>💰 Optimize cloud costs with automated budgets, tagging strategies, and proactive monitoring.</li>
+            <li>🔐 Strengthen security using IAM policies, compliance-ready configurations, and best practices.</li>
             <li>🔄 Automating infrastructure with Terraform & Ansible for faster, consistent deployments.</li>
-            <li>📊 Build dashboards and reporting for both security and cost visibility.</li>
-            <li>💼 Enforcing cloud governance frameworks that align with corporate and regulatory standards....</li>
+            <li>📊 Build dashboards & reports for both security and cost visibility.</li>
+            <li>💼 Implement cloud governance frameworks that align with corporate and regulatory standards....</li>
           </ul>
 
-          <p>Whether you need a <strong>one-time AWS cost audit, you’re a startup scaling fast, need an end-to-end cloud infrastructure management, an enterprise managing complex multi-account setups, or a business needing cloud cost visibility,</strong> I can help you:
+          <p>Whether it's a <strong>one-time AWS cost audit, scaling a startup’s cloud infrastructure, managing a multi-account enterprise environment / end-to-end cloud infrastructure management, or a business needing cloud cost visibility,</strong> I help teams:
           </p>
           
           <ul>
-            <li>✅ Lock down your environment against risks</li>
-            <li>✅ Control and predict your AWS spend </li>
-            <li>✅ Build infrastructure that’s secure, efficient, and audit-ready </li>
+            <li>✅ Reduce risks and secure their cloud environment </li>
+            <li>✅ Control and predict cloud spend </li>
+            <li>✅ Deploy infrastructure that’s secure, efficient, and audit-ready </li>
           </ul>
 
-          <p>🤝 Let's bridge the gaps between your <strong>business and technology... 💼</strong></p>
+          <p> I combine hands-on engineering with strategic guidance to bridge the gap between technology and business outcomes, ensuring your cloud infrastructure is both <strong>robust and financially sustainable... 💼</strong></p>
           
-          <p>🚀 Let’s make your cloud infrastructure <strong>secure, efficient, and financially sustainable.</strong>.</p>
-
+          
         </div>
       </div>
 
