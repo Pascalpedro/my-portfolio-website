@@ -871,12 +871,21 @@ export const BlogPage = () => {
     },
     {
       id: 2,
-      title: 'My Full-Stack Cloud Portfolio…',
+      title: 'My Full-Stack Cloud Portfolio...',
       summary: 'Combining React + FastAPI + MongoDB with CI/CD and cloud hosting practices!!!...',
       date: '2025-07-25',
       link: 'https://medium.com/@attamapascalpedro/building-my-portfolio-with-react-fastapi-mongodb-a-full-stack-walkthrough-1d626633f67f',
       image: '/blog-portfolio.PNG',
       tags: ["Cloud", "FastAPI-Python", "React-NodeJS"],
+    },
+    {
+      id: 3,
+      title: 'AWS Cloud Migration + CI/CD Project...',
+      summary: 'How I Migrated My Cloud Engineer Portfolio to AWS with S3, CloudFront, Route 53 & GitHub Actions CI/CD!!!...',
+      date: '2025-09-02',
+      link: 'https://attamapascalpedro.medium.com/how-i-migrated-my-cloud-engineer-portfolio-to-aws-with-s3-cloudfront-route-53-github-actions-4e38c5831341',
+      image: '/blog-aws-arch.PNG',
+      tags: ["AWS", "CI/CD Pipelines", "Security"],
     },
   ];
 
