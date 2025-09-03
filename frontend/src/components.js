@@ -441,6 +441,15 @@ export const PortfolioPage = () => {
     },
     {
       id: 2,
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      category: 'Certifications',
+      image: '/aws-ccp.png',
+      link: 'https://www.credly.com/badges/c0d271be-baee-4a66-8968-a41df49afeaa/public_url',
+      tags: ['AWS', 'Cloud', 'AWS Cloud']
+    },
+    {
+      id: 3,
       title: 'Pascalpedro - My GitHub Proflie',
       issuer: 'GitHub',
       category: 'Project',
@@ -449,7 +458,7 @@ export const PortfolioPage = () => {
       tags: ['GitHub','CI/CD', 'Git', 'Markdown']
     },
     {
-      id: 3,
+      id: 4,
       title: 'McKinsey.org Forward Program',
       issuer: 'McKinsey & Company',
       category: 'Certifications',
@@ -458,7 +467,7 @@ export const PortfolioPage = () => {
       tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
     },
     {
-      id: 4,
+      id: 5,
       title: 'Network Support and Security',
       issuer: 'Cisco',
       category: 'Badge',
@@ -467,7 +476,7 @@ export const PortfolioPage = () => {
       tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
     {
-      id: 5,
+      id: 6,
       title: 'Endpoint Security',
       issuer: 'Cisco',
       category: 'Badge',
@@ -477,7 +486,7 @@ export const PortfolioPage = () => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: 'PedroOps - FinOps SaaS',
       issuer: 'PedroOps',
       category: 'Project',
@@ -486,7 +495,7 @@ export const PortfolioPage = () => {
       tags: ['Saas', 'Cost-Optimization','Cloud']
     },
     {
-      id: 7,
+      id: 8,
       title: 'Custodia - Secured Web-app',
       issuer: 'PedroOps',
       category: 'Project',
@@ -495,7 +504,7 @@ export const PortfolioPage = () => {
       tags: ['Microservice','Auth0', 'Ngrok', 'Nginx']
     },
     {
-      id: 8,
+      id: 9,
       title: 'My-Portfolio - A Fullstack Project',
       issuer: 'PedroOps',
       category: 'Project',
