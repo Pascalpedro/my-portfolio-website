@@ -339,26 +339,26 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I'm Pascal Attama — a <strong>cloud Security & FinOps Engineer</strong> who helps businesses design, secure, and optimize cloud environments while ensuring financial efficiency. 
-            I work across AWS, Azure, and hybrid cloud infrastructures, delivering solutions that are secure, cost-effective, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps. 
+            I help businesses ,<strong>design, secure, and optimize</strong> cloud environments while ensuring <strong>financial efficiency</strong>. 
+            I work across AWS, Azure, and hybrid cloud infrastructures, delivering solutions that are secure, cost-effective, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps.
           </p>
           <p>
-            With a background in cloud networking and governance, I bring a <strong>blend of technical expertise and strategic insight</strong> to cloud operations, helping organizations achieve measurable results:
+            𝗪𝗵𝗮𝘁 𝗜 𝗗𝗼:🛠️
           </p>
 
           <ul>
-            <li>💰 Optimize cloud costs with automated budgets, tagging strategies, and proactive monitoring.</li>
-            <li>🔐 Strengthen security using IAM policies, compliance-ready configurations, and best practices.</li>
-            <li>🔄 Automating infrastructure with Terraform & Ansible for faster, consistent deployments.</li>
-            <li>📊 Build dashboards & reports for both security and cost visibility.</li>
-            <li>💼 Implement cloud governance frameworks that align with corporate and regulatory standards....</li>
+            <li>💰 Optimize cloud costs → automated budgets, tagging strategies, proactive monitoring.</li>
+            <li>🔐 Strengthen security → IAM policies, compliance-ready configs, and best practices.</li>
+            <li>🔄 Automating infrastructure → Terraform & Ansible for faster, consistent deployments.</li>
+            <li>📊 Build visibility → dashboards & reports for both security and cost insights.</li>
+            <li>💼 Implement governance → frameworks that align with corporate and regulatory standard.</li>
           </ul>
 
-          <p>Whether it's a <strong>one-time AWS cost audit, scaling a startup’s cloud infrastructure, managing a multi-account enterprise environment / end-to-end cloud infrastructure management, or a business needing cloud cost visibility,</strong> I help teams:
+          <p>𝗛𝗼𝘄 𝗜 𝗛𝗲𝗹𝗽: 📈
           </p>
           
           <ul>
-            <li>✅ Reduce risks and secure their cloud environment </li>
+            <li>✅ Reduce risks and secure your cloud environment </li>
             <li>✅ Control and predict cloud spend </li>
             <li>✅ Deploy infrastructure that’s secure, efficient, and audit-ready </li>
           </ul>
