@@ -487,12 +487,12 @@ export const PortfolioPage = () => {
 
     {
       id: 7,
-      title: 'PedroOps - FinOps SaaS',
+      title: 'PedroOps - AWS Cloud Portfolio',
       issuer: 'PedroOps',
       category: 'Project',
       image: '/PedroOps.png',
-      link: 'https://pedroops.com',
-      tags: ['Saas', 'Cost-Optimization','Cloud']
+      link: 'https://www.pedroops.com',
+      tags: ['AWS', 'Cloud', 'CI/CD','Security']
     },
     {
       id: 8,
