@@ -871,24 +871,15 @@ export const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'Stepping into Ubuntu...',
-      summary: 'How to Setup Ubuntu Linux on a VirtualBox...',
-      date: '2024-05-17',
-      link: 'https://medium.com/@attamapascalpedro/how-to-setup-ubuntu-linux-on-a-virtualbox-edd9ca9fe5ff',
-      image: '/blog-ubuntu.PNG',
-      tags: ["Linux", "Ubuntu","Virtualization"],
+      title: 'Recovering Kubernetes After a Node IP Change',
+      summary: 'How I fixed etcd, kubeconfigs, and API server cert issues on my bare-metal cluster...',
+      date: '2025-09-05',
+      link: 'https://attamapascalpedro.medium.com/kubernetes-cluster-broke-after-a-node-ip-change-heres-the-fix-and-lessons-learned-98b73604863b',
+      image: '/blog-k8s-crash.PNG',
+      tags: ["Kubernetes", "DevOps", "Cloud"],
     },
     {
       id: 2,
-      title: 'My Full-Stack Cloud Portfolio...',
-      summary: 'Combining React + FastAPI + MongoDB with CI/CD and cloud hosting practices!!!...',
-      date: '2025-07-25',
-      link: 'https://medium.com/@attamapascalpedro/building-my-portfolio-with-react-fastapi-mongodb-a-full-stack-walkthrough-1d626633f67f',
-      image: '/blog-portfolio.PNG',
-      tags: ["Cloud", "FastAPI-Python", "React-NodeJS"],
-    },
-    {
-      id: 3,
       title: 'AWS Cloud Migration + CI/CD Project...',
       summary: 'How I Migrated My Cloud Engineer Portfolio to AWS with S3, CloudFront, Route 53 & GitHub Actions CI/CD!!!...',
       date: '2025-09-02',
@@ -896,7 +887,25 @@ export const BlogPage = () => {
       image: '/blog-aws-arch.PNG',
       tags: ["AWS", "CI/CD Pipelines", "Security"],
     },
-  ];
+    {
+      id: 3,
+      title: 'My Full-Stack Cloud Portfolio...',
+      summary: 'Combining React + FastAPI + MongoDB with CI/CD and cloud hosting practices!!!...',
+      date: '2025-07-25',
+      link: 'https://medium.com/@attamapascalpedro/building-my-portfolio-with-react-fastapi-mongodb-a-full-stack-walkthrough-1d626633f67f',
+      image: '/blog-portfolio.PNG',
+      tags: ["Cloud", "FastAPI-Python", "React-NodeJS"],
+     },
+     {
+      id: 4,
+      title: 'Stepping into Ubuntu...',
+      summary: 'How to Setup Ubuntu Linux on a VirtualBox...',
+      date: '2024-05-17',
+      link: 'https://medium.com/@attamapascalpedro/how-to-setup-ubuntu-linux-on-a-virtualbox-edd9ca9fe5ff',
+      image: '/blog-ubuntu.PNG',
+      tags: ["Linux", "Ubuntu","Virtualization"],
+    },
+ ];
 
   return (
     <motion.div
