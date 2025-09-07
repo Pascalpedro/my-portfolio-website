@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Modal from './Modal';
 import axios from 'axios';
 import {
-  User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin,
+  User, FileText, Briefcase, Globe, BookOpen, Mail, Github, Twitter, Instagram, Linkedin, Notebook, Award, 
   Download, MapPin, Monitor, Cloud, Sliders, Shield, ShieldCheck, DollarSign, ClipboardCheck, Code, Filter
 } from 'lucide-react';
 
@@ -154,14 +154,14 @@ export const Header = () => {
             <Twitter size={18} />
           </motion.a>
           <motion.a
-            href="https://instagram.com/pascalpedro47"
+            href="https://attamapascalpedro.medium.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 bg-gray-700/60 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-600/60 transition-all duration-200"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Instagram size={18} />
+            <Notebook size={18} />
           </motion.a>
           <motion.a
             href="https://linkedin.com/in/pascal-attama"
@@ -181,7 +181,7 @@ export const Header = () => {
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Globe size={18} />
+            <Award size={18} />
           </motion.a>        
         </div>
 
@@ -432,61 +432,6 @@ export const PortfolioPage = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'FinOps Certified Practitioner',
-      issuer: 'FinOps Foundation',
-      category: 'Certifications',
-      image: '/finops.jpg',
-      link: 'https://www.credly.com/badges/5e49abb3-6b74-4286-bb20-cdbb8a8ebc37/public_url',
-      tags: ['FinOps', 'Cloud', 'Cost-Optimization']
-    },
-    {
-      id: 2,
-      title: 'AWS Certified Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      category: 'Certifications',
-      image: '/aws-ccp.png',
-      link: 'https://www.credly.com/badges/c0d271be-baee-4a66-8968-a41df49afeaa/public_url',
-      tags: ['AWS', 'Cloud', 'AWS Cloud']
-    },
-    {
-      id: 3,
-      title: 'Pascalpedro - My GitHub Proflie',
-      issuer: 'GitHub',
-      category: 'Project',
-      image: '/github.png',
-      link: 'https://github.com/Pascalpedro/Pascalpedro',
-      tags: ['GitHub','CI/CD', 'Git', 'Markdown']
-    },
-    {
-      id: 4,
-      title: 'McKinsey.org Forward Program',
-      issuer: 'McKinsey & Company',
-      category: 'Certifications',
-      image: '/McKinsey.jpg',
-      link: 'https://www.credly.com/badges/472f077d-007c-4af5-bbb1-963c1512bfd0',
-      tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
-    },
-    {
-      id: 5,
-      title: 'Network Support and Security',
-      issuer: 'Cisco',
-      category: 'Badge',
-      image: '/NetSec.png',
-      link: 'https://www.credly.com/badges/3d33f23c-4c34-408e-9b21-5e172d6e3191/',
-      tags: ['Network', 'CyberSecurity', 'Firewalls']
-    },
-    {
-      id: 6,
-      title: 'Endpoint Security',
-      issuer: 'Cisco',
-      category: 'Badge',
-      image: '/EndpointSecurity.png',
-      link: 'https://www.credly.com/badges/82f7c4d1-f670-45d0-9a66-b0262c46bcff',
-      tags: ['Network', 'CyberSecurity', 'Firewalls']
-    },
-
-    {
-      id: 7,
       title: 'PedroOps - AWS Cloud Portfolio',
       issuer: 'PedroOps',
       category: 'Project',
@@ -495,7 +440,7 @@ export const PortfolioPage = () => {
       tags: ['AWS', 'Cloud', 'CI/CD','Security']
     },
     {
-      id: 8,
+      id: 2,
       title: 'Custodia - Secured Web-app',
       issuer: 'PedroOps',
       category: 'Project',
@@ -504,13 +449,67 @@ export const PortfolioPage = () => {
       tags: ['Microservice','Auth0', 'Ngrok', 'Nginx']
     },
     {
-      id: 9,
+      id: 3,
+      title: 'FinOps Certified Practitioner',
+      issuer: 'FinOps Foundation',
+      category: 'Certifications',
+      image: '/finops.jpg',
+      link: 'https://www.credly.com/badges/5e49abb3-6b74-4286-bb20-cdbb8a8ebc37/public_url',
+      tags: ['FinOps', 'Cloud', 'Cost-Optimization']
+    },
+    {
+      id: 4,
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      category: 'Certifications',
+      image: '/aws-ccp.png',
+      link: 'https://www.credly.com/badges/c0d271be-baee-4a66-8968-a41df49afeaa/public_url',
+      tags: ['AWS', 'Cloud', 'AWS Cloud']
+    },
+        {
+      id: 5,
       title: 'My-Portfolio - A Fullstack Project',
       issuer: 'PedroOps',
       category: 'Project',
       image: '/portfolio.png',
       link: 'https://github.com/Pascalpedro/my-portfolio-website',
       tags: ['React','FastAPI', 'MongoDB']
+    },
+    {
+      id: 6,
+      title: 'Pascalpedro - My GitHub Profile',
+      issuer: 'GitHub',
+      category: 'Project',
+      image: '/github.png',
+      link: 'https://github.com/Pascalpedro/Pascalpedro',
+      tags: ['GitHub','CI/CD', 'Git', 'Markdown']
+    },
+    {
+      id: 7,
+      title: 'McKinsey.org Forward Program',
+      issuer: 'McKinsey & Company',
+      category: 'Certifications',
+      image: '/McKinsey.jpg',
+      link: 'https://www.credly.com/badges/472f077d-007c-4af5-bbb1-963c1512bfd0',
+      tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
+    },
+    {
+      id: 8,
+      title: 'Network Support and Security',
+      issuer: 'Cisco',
+      category: 'Badge',
+      image: '/NetSec.png',
+      link: 'https://www.credly.com/badges/3d33f23c-4c34-408e-9b21-5e172d6e3191/',
+      tags: ['Network', 'CyberSecurity', 'Firewalls']
+    },
+    {
+      id: 9,
+      title: 'Endpoint Security',
+      issuer: 'Cisco',
+      category: 'Badge',
+      image: '/EndpointSecurity.png',
+      link: 'https://www.credly.com/badges/82f7c4d1-f670-45d0-9a66-b0262c46bcff',
+      tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
     ];
 
