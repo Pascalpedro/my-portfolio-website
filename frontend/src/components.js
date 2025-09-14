@@ -486,6 +486,15 @@ export const PortfolioPage = () => {
     },
     {
       id: 7,
+      title: 'Aviatrix Certified Engineer Multicloud Network Associate',
+      issuer: 'Aviatrix',
+      category: 'Certifications',
+      image: '/aviatrix.png',
+      link: 'https://www.credly.com/earner/earned/badge/d1b9e976-14cf-4688-9f96-30a97bd1b7a1',
+      tags: ['Multicloud','Cloud Security', 'Cloud Networking', 'Networking']
+    },
+    {
+      id: 7,
       title: 'McKinsey.org Forward Program',
       issuer: 'McKinsey & Company',
       category: 'Certifications',
