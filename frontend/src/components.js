@@ -490,11 +490,11 @@ export const PortfolioPage = () => {
       issuer: 'Aviatrix',
       category: 'Certifications',
       image: '/aviatrix.png',
-      link: 'https://www.credly.com/earner/earned/badge/d1b9e976-14cf-4688-9f96-30a97bd1b7a1',
-      tags: ['Multicloud','Cloud Security', 'Cloud Networking', 'Networking']
+      link: 'https://www.credly.com/badges/d1b9e976-14cf-4688-9f96-30a97bd1b7a1/public_url',
+      tags: ['Multi-Cloud','Cloud Security', 'Cloud-Native', 'Cloud Networking']
     },
     {
-      id: 7,
+      id: 8,
       title: 'McKinsey.org Forward Program',
       issuer: 'McKinsey & Company',
       category: 'Certifications',
@@ -503,7 +503,7 @@ export const PortfolioPage = () => {
       tags: ['Collaboration', 'Agile', 'Team Leadership', 'Communication']
     },
     {
-      id: 8,
+      id: 9,
       title: 'Network Support and Security',
       issuer: 'Cisco',
       category: 'Badge',
@@ -512,7 +512,7 @@ export const PortfolioPage = () => {
       tags: ['Network', 'CyberSecurity', 'Firewalls']
     },
     {
-      id: 9,
+      id: 10,
       title: 'Endpoint Security',
       issuer: 'Cisco',
       category: 'Badge',
