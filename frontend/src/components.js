@@ -664,14 +664,14 @@ export const ResumePage = () => {
       ]
     },
     {
-      role: 'Technical Support Engineer',
+      role: 'IT Infrastructure Engineer ',
       company: 'Unitech Global Resources',
       period: '2020 - 2022',
-      location: 'Lagos, Nigeria',
+      location: 'PH, Nigeria',
       responsibility: [
-        'Provided Tier-2 technical support and Linux/Network administration, resolving 33% of issues on first contact and reducing MTTR across hybrid environments.',
-        'Automated maintenance, scaling, and deployments using Bash, CronJobs, and serverless optimizations, improving efficiency by 25% and minimizing downtime. ',
-        'Developed knowledge bases and documentation that streamlined troubleshooting and reduced escalations for long-term operational gains.'
+        'Administered hybrid IT infrastructure spanning AWS, Linux/Windows servers, VPNs, and enterprise networks, improving system uptime and reducing MTTR across hybrid environments and resolving 33% of issues on first contact.',
+        'Implemented IT automation, service monitoring, and compliance-driven access controls to improve system resilience and reduce service downtime.',
+        'Strengthened IT operations by integrating vendor management, VPNs, network tunnels, and wireless networks while producing audit-ready documentation to align with security standards.'
       ] 
     },
     {
@@ -680,7 +680,7 @@ export const ResumePage = () => {
       period: '2016 - 2020',
       location: 'Lagos, Nigeria',
       responsibility: [
-        'Designed and deployed secure, high-performance L1–L3 network infrastructures using Cisco, MikroTik, and Huawei devices, implementing BGP, OSPF, VLANs, and network segmentation best practices.',
+        'Engineered and deployed secure, high-performance L1–L3 network infrastructures using Cisco, MikroTik, and Huawei devices, implementing BGP, OSPF, VLANs, and network segmentation best practices.',
         'Delivered Tier-2 network technical support with a 95% first-call resolution rate and reduced network resolution time, while leading enterprise network upgrades and wireless LAN deployments.',
         'Conducted detailed network surveys and simulations with Pathloss, Lucidchart, and GNS3 to ensure accurate design and successful implementation.'
       ]  
