@@ -291,6 +291,11 @@ export const Sidebar = ({ currentPage, setCurrentPage }) => {
 export const AboutPage = () => {
   const services = [
     {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'I plan and execute seamless migrations from on-premise and hybrid systems to AWS — whether lift-and-shift or re-architected — ensuring zero downtime, cost efficiency, and compliance safeguards.'
+    },
+    {
       icon: ShieldCheck,
       title: 'Cloud Security',
       description: 'I secure cloud environments by implementing IAM best practices, encryption, GuardDuty, and audit logging to ensure compliance and reduce risk.'
@@ -299,6 +304,11 @@ export const AboutPage = () => {
       icon: DollarSign,
       title: 'FinOps',
       description: 'I optimize and reduce cloud spend through visibility, budgeting, tagging strategies, and cost forecasting using tools like AWS Budgets and Cost Explorer.'
+    },
+        {
+      icon: Code,
+      title: 'Infrastructure as Code',
+      description: 'I automate secure and repeatable infrastructure deployment using Terraform and CI/CD pipelines to enforce best practices at scale.'
     },
     {
       icon: Cloud,
@@ -309,16 +319,6 @@ export const AboutPage = () => {
       icon: Sliders,
       title: 'Cloud Governance',
       description: 'I align cloud operations with security and cost controls by designing policies for identity, access, tagging, and budgeting across teams and accounts.'
-    },
-    {
-      icon: ClipboardCheck,
-      title: 'Cloud Audit & Compliance',
-      description: 'I perform cloud audits and generate compliance reports based on industry benchmarks like CIS AWS Foundations and SOC2 readiness.'
-    },
-    {
-      icon: Code,
-      title: 'Infrastructure as Code',
-      description: 'I automate secure and repeatable infrastructure deployment using Terraform and CI/CD pipelines to enforce best practices at scale.'
     }
   ];
 
