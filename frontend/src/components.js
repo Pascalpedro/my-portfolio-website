@@ -16,26 +16,24 @@ export const GeometricBackground = () => {
 
       {/* Top Left Large Geometric Cluster */}
       <motion.div
-        className="absolute -top-32 -left-32 w-[500px] h-[500px]"
+        className="absolute -top-40 -left-40 w-[500px] h-[500px]"
         animate={{ 
           rotate: [0, 360],
           scale: [1, 1.05, 1]
         }}
         transition={{ 
-          duration: 25, 
+          duration: 40, 
           repeat: Infinity, 
           ease: "linear" 
         }}
       >
         <div className="relative w-full h-full">
-          {/* Main orange triangle */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600 transform rotate-45 rounded-lg opacity-15 clip-triangle"></div>
-          {/* Cyan triangle */}
-          <div className="absolute inset-8 bg-gradient-to-br from-cyan-400 via-teal-500 to-cyan-600 transform -rotate-12 rounded-lg opacity-20 clip-triangle"></div>
-          {/* Yellow triangle */}
-          <div className="absolute inset-16 bg-gradient-to-br from-yellow-400 via-orange-500 to-yellow-600 transform rotate-12 rounded-lg opacity-15 clip-triangle"></div>
-          {/* Small red accent */}
-          <div className="absolute inset-24 bg-gradient-to-br from-red-500 to-red-600 transform rotate-45 rounded-lg opacity-25 clip-triangle"></div>
+          {/* Main dark slate triangle */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-black transform rotate-45 rounded-lg opacity-25 clip-triangle"></div>
+          {/* Subtle blue accent */}
+          <div className="absolute inset-8 bg-gradient-to-br from-blue-800 via-indigo-900 to-slate-900 transform -rotate-12 rounded-lg opacity-40 clip-triangle"></div>
+          {/* Green triangle */}
+          <div className="absolute inset-16 bg-gradient-to-br from-teal-700 via-cyan-800 to-slate-900 transform rotate-12 rounded-lg opacity-15 clip-triangle"></div>
         </div>
       </motion.div>
 
@@ -53,12 +51,10 @@ export const GeometricBackground = () => {
         }}
       >
         <div className="relative w-full h-full">
-          {/* Main teal triangle */}
-          <div className="absolute inset-0 bg-gradient-to-tl from-teal-500 via-cyan-500 to-teal-600 transform rotate-45 rounded-lg opacity-18 clip-triangle"></div>
-          {/* Purple triangle */}
-          <div className="absolute inset-6 bg-gradient-to-tl from-purple-500 via-blue-500 to-purple-600 transform -rotate-30 rounded-lg opacity-15 clip-triangle"></div>
-          {/* Orange accent */}
-          <div className="absolute inset-12 bg-gradient-to-tl from-orange-500 to-orange-600 transform rotate-12 rounded-lg opacity-20 clip-triangle"></div>
+          {/* Main indigo triangle */}
+          <div className="absolute inset-0 bg-gradient-to-tl from-indigo-900 via-slate-900 to-black transform rotate-45 rounded-lg opacity-25 clip-triangle"></div>
+          {/* Teal accent */}
+          <div className="absolute inset-6 bg-gradient-to-tl from-teal-800 via-cyan-900 to-slate-900 transform -rotate-30 rounded-lg opacity-15 clip-triangle"></div>
         </div>
       </motion.div>
 
@@ -77,10 +73,8 @@ export const GeometricBackground = () => {
         }}
       >
         <div className="relative w-full h-full">
-          {/* Cyan floating triangle */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 transform rotate-45 rounded-lg opacity-12 clip-triangle"></div>
-          {/* Small orange accent */}
-          <div className="absolute inset-8 bg-gradient-to-br from-orange-400 to-red-500 transform -rotate-30 rounded-lg opacity-15 clip-triangle"></div>
+          {/* Dark triangle with cyan accent */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-black-900 to-slate-900 transform rotate-45 rounded-lg opacity-18 clip-triangle"></div>
         </div>
       </motion.div>
 
@@ -98,9 +92,9 @@ export const GeometricBackground = () => {
         }}
       >
         <div className="relative w-full h-full">
-          {/* Small geometric elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-500 transform rotate-45 rounded-lg opacity-10 clip-triangle"></div>
-          <div className="absolute inset-6 bg-gradient-to-br from-teal-500 to-cyan-500 transform -rotate-45 rounded-lg opacity-12 clip-triangle"></div>
+          {/* Neutral background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-slate-900 to-black transform rotate-45 rounded-lg opacity-20 clip-triangle"></div>
+          <div className="absolute inset-6 bg-gradient-to-br from-teal-700 to-blue-800 to-slate-900 transform -rotate-45 rounded-lg opacity-15 clip-triangle"></div>
         </div>
       </motion.div>
     </div>
@@ -726,18 +720,18 @@ export const ResumePage = () => {
     { name: 'AWS & Cloud Architecture', level: 'Advanced' },
     { name: 'Linux', level: "Advanced" },
     { name: 'Cloud Security & AWS IAM', level: 'Advanced' },
-    { name: 'FinOps & Cost Optimization', level: 'Advanced' },
+    { name: 'FinOps & Cost Optimization', level: 'Intermediate' },
     { name: 'AWS Budgets & Cost Explorer', level: 'Intermediate' },
     { name: 'AWS GuardDuty & KMS', level: 'Intermediate' },
     { name: 'AWS Config & Cloud Audit', level: 'Intermediate' },
-    { name: 'Security Hardening & Governance', level: 'Intermediate' },
-    { name: 'Terraform & Ansible', level: 'Intermediate' },
-    { name: 'Cloud Cost Monitoring', level: 'Intermediate' },
+    { name: 'Cloudwatch & Monitoring', level: 'Intermediate' },
+    { name: 'Terraform & Ansible', level: 'Advanced' },
+    { name: 'GitHub-Actions & CI/CD Pipelines', level: 'Intermediate' },
     {name:  'JSON & YAML', level: 'Intermediate'},
     { name: 'Docker & K8s', level: "Intermediate" },
     { name: 'IP Networks & VPCs', level: "Intermediate" },
     { name: 'Git & GitHub', level: "Intermediate" },
-    { name: 'Python & Bash', level: "Intermediate" },
+    { name: 'Python-Flask & Nodejs-React', level: "Intermediate" },
     
   ];
 
