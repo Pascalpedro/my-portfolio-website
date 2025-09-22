@@ -11,6 +11,9 @@ import {
 export const GeometricBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {/* Dark overlay to improve contrast */}
+      <div className="absolute inset-0 bg-black/70 lg:bg-black/50 z-0"></div>
+
       {/* Top Left Large Geometric Cluster */}
       <motion.div
         className="absolute -top-32 -left-32 w-[500px] h-[500px]"
