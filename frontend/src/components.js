@@ -12,7 +12,7 @@ export const GeometricBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Dark overlay to improve contrast */}
-      <div className="absolute inset-0 bg-black/70 lg:bg-black/50 z-0"></div>
+      <div className="absolute inset-0 bg-black/90 lg:bg-black/90 z-0"></div>
 
       {/* Top Left Large Geometric Cluster */}
       <motion.div
@@ -342,31 +342,32 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I help businesses ,<strong>design, secure, and optimize</strong> cloud environments while ensuring <strong>financial efficiency</strong>. 
-            I work across AWS, Azure, and hybrid cloud infrastructures, delivering solutions that are secure, cost-effective, and governance-ready — so you can focus on growth without worrying about overspending or compliance gaps.
+            I am an AWS Cloud & IT Infrastructure Engineer with years of experience in Cloud Networking, Infrastructure Automation, and Systems Administration.
+            I help businesses <strong>migrate to AWS without downtime, reduce cloud costs, secure AWS environments, and automate deployments</strong> —so you can scale faster, safer, and more cost-effectively.
           </p>
           <p>
-            𝗪𝗵𝗮𝘁 𝗜 𝗗𝗼:🛠️
+            𝗪𝗵𝗮𝘁 𝗜 𝗗eliver:🛠️
           </p>
 
           <ul>
-            <li>💰 Optimize cloud costs → automated budgets, tagging strategies, proactive monitoring.</li>
-            <li>🔐 Strengthen security → IAM policies, compliance-ready configs, and best practices.</li>
-            <li>🔄 Automating infrastructure → Terraform & Ansible for faster, consistent deployments.</li>
-            <li>📊 Build visibility → dashboards & reports for both security and cost insights.</li>
-            <li>💼 Implement governance → frameworks that align with corporate and regulatory standard.</li>
+            <li>☁️ Cloud Migration → seamless lift-and-shift or re-architected migrations from on-prem & hybrid to AWS, with zero downtime and compliance safeguards.</li>
+            <li>💰 Cost Optimization → cut AWS bills up to 30% with smarter tagging, budgets & monitoring.</li>
+            <li>🔐 Security Hardening → rock-solid IAM, compliance-ready configs, zero trust practices.</li>
+            <li>🔄 Automation → Terraform, CDK & Ansible to deploy faster, safer, and more consistently.</li>
+            <li>📊 Visibility → dashboards & reports for both cost + security health.</li>
+            <li>💼 Governance → frameworks that align with corporate and regulatory standard. </li>
           </ul>
 
           <p>𝗛𝗼𝘄 𝗜 𝗛𝗲𝗹𝗽: 📈
           </p>
           
           <ul>
-            <li>✅ Reduce risks and secure your cloud environment </li>
-            <li>✅ Control and predict cloud spend </li>
-            <li>✅ Deploy infrastructure that’s secure, efficient, and audit-ready </li>
+            <li>✅ Hands-on AWS engineer + FinOps strategist </li>
+            <li>✅ Migration & optimization expertise across enterprise + hybrid environments</li>
+            <li>✅ Secure, efficient, and governance-aligned infrastructure without the bloat </li>
           </ul>
 
-          <p> I combine hands-on engineering with strategic guidance to bridge the gap between technology and business outcomes, ensuring your cloud infrastructure is both <strong>robust and financially sustainable... 💼</strong></p>
+          <p> 👉 Let’s work together to cut costs, secure your AWS, and migrate with confidence—so your business runs lean, safe, and ready to scale.</p>
           
           
         </div>
