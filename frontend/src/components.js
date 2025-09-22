@@ -655,8 +655,8 @@ export const ResumePage = () => {
     {
       company: 'Trakatel Limited',
       role: 'Cloud Engineer',
-      period: '2022 - Present',
-      location: 'Lagos, Nigeria',
+      period: 'Jan, 2022 - Present : Full-time',
+      location: 'Hybrid, Nigeria',
       responsibility: [
         'Designs and deploys secure, scalable AWS infrastructure, integrating hybrid-cloud connectivity while optimizing costs through FinOps best practices.',
         'Automates provisioning with Terraform and Ansible, improved container orchestration with Docker, ECS, and EKS, and strengthened cloud security with IAM, GuardDuty, and compliance frameworks.',
@@ -664,10 +664,21 @@ export const ResumePage = () => {
       ]
     },
     {
+      role: 'Cloud Support Engineer ',
+      company: 'Perizer',
+      period: 'Octo, 2024 - Mar, 2025 : Contract',
+      location: 'Remote, United States',
+      responsibility: [
+        'Reduced incident resolution time by implementing automated monitoring alerts for Spherelets and Datastores, coordinating escalations via MS Teams and Jira, and enabling rapid detection of performance and capacity issues.',
+        'Improved how compute and storage resources are used, helping customers save money by adjusting Spherelet sizes and making billing clearer, with progress tracked in Confluence and Zoho Projects.',
+        'Elevated first-contact resolution and CSAT scores by creating a knowledge base (Confluence/Zoho Wiki), and collaborating with dev teams via GitHub and MS Teams to streamline deployments, improve error logging, and reduce repeat support tickets.'
+      ] 
+    },
+    {
       role: 'IT Infrastructure Engineer ',
       company: 'Unitech Global Resources',
-      period: '2020 - 2022',
-      location: 'PH, Nigeria',
+      period: 'Feb, 2020 - Jan, 2022 : Full-time',
+      location: 'Hybrid, Nigeria',
       responsibility: [
         'Administered hybrid IT infrastructure spanning AWS, Linux/Windows servers, VPNs, and enterprise networks, improving system uptime and reducing MTTR across hybrid environments and resolving 33% of issues on first contact.',
         'Implemented IT automation, service monitoring, and compliance-driven access controls to improve system resilience and reduce service downtime.',
@@ -677,8 +688,8 @@ export const ResumePage = () => {
     {
       role: 'Network Engineer',
       company: 'Cambridge Broadband Networks',
-      period: '2016 - 2020',
-      location: 'Lagos, Nigeria',
+      period: 'Aug, 2016 - Jan, 2020 : Full-time',
+      location: 'Onsite, Nigeria',
       responsibility: [
         'Engineered and deployed secure, high-performance L1–L3 network infrastructures using Cisco, MikroTik, and Huawei devices, implementing BGP, OSPF, VLANs, and network segmentation best practices.',
         'Delivered Tier-2 network technical support with a 95% first-call resolution rate and reduced network resolution time, while leading enterprise network upgrades and wireless LAN deployments.',
