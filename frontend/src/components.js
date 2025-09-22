@@ -117,7 +117,7 @@ export const Header = () => {
           transition={{ duration: 0.2 }}
         >
           <img 
-            src="/profile.png" 
+            src="/pro-picz.png" 
             alt="Pascal Attama" 
             className="w-full h-full rounded-3xl object-cover border-4 border-blue-500"
           />
@@ -343,19 +343,37 @@ export const AboutPage = () => {
             𝗪𝗵𝗮𝘁 𝗜 𝗗eliver:🛠️
           </p>
 
-          <ul>
-            <li>☁️ Cloud Migration → seamless lift-and-shift or re-architected migrations from on-prem & hybrid to AWS, with zero downtime and compliance safeguards.</li>
-            <li>💰 Cost Optimization → cut AWS bills up to 30% with smarter tagging, budgets & monitoring.</li>
-            <li>🔐 Security Hardening → rock-solid IAM, compliance-ready configs, zero trust practices.</li>
-            <li>🔄 Automation → Terraform, CDK & Ansible to deploy faster, safer, and more consistently.</li>
-            <li>📊 Visibility → dashboards & reports for both cost + security health.</li>
-            <li>💼 Governance → frameworks that align with corporate and regulatory standard. </li>
+          <ul className="list-none space-y-4 leading-relaxed border-l-2 border-blue-500 pl-4">
+            <li>
+              <span className="text-xl font-bold mr-2">☁️</span>
+              Cloud Migration → seamless lift-and-shift or re-architected migrations from on-prem & hybrid to AWS, with zero downtime and compliance safeguards.
+            </li>
+            <li>
+              <span className="text-xl font-bold mr-2">💰</span>
+              Cost Optimization → cut AWS bills up to 30% with smarter tagging, budgets & monitoring.
+            </li>
+            <li>
+              <span className="text-xl font-bold mr-2">🔐</span>
+              Security Hardening → rock-solid IAM, compliance-ready configs, zero trust practices.
+            </li>
+            <li>
+              <span className="text-xl font-bold mr-2">🔄</span>
+              Automation → Terraform, CDK & Ansible to deploy faster, safer, and more consistently.
+            </li>
+            <li>
+              <span className="text-xl font-bold mr-2">📊</span>
+              Visibility → dashboards & reports for both cost + security health.
+            </li>
+            <li>
+              <span className="text-xl font-bold mr-2">💼</span>
+              Governance → frameworks that align with corporate and regulatory standard. 
+            </li>
           </ul>
 
           <p>𝗛𝗼𝘄 𝗜 𝗛𝗲𝗹𝗽: 📈
           </p>
           
-          <ul>
+          <ul className="list-none space-y-4 leading-relaxed border-l-2 border-blue-500 pl-4">
             <li>✅ Hands-on AWS engineer + FinOps strategist </li>
             <li>✅ Migration & optimization expertise across enterprise + hybrid environments</li>
             <li>✅ Secure, efficient, and governance-aligned infrastructure without the bloat </li>
