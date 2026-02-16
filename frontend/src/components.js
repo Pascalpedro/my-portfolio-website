@@ -195,7 +195,7 @@ export const Header = () => {
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">LOCATION</span>
-            <span className="text-white flex items-center gap-1"> 📍 Remote (GMT+1) | US & EU Time Zone Overlap | Open to Relocation</span>
+            <span className="text-white flex items-center gap-1"> 📍 Remote (GMT+1) | Overlap with US & EU Business Hours </span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">STATUS</span>
