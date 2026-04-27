@@ -1,11 +1,14 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, Request
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 from typing import List
 import uuid
 from datetime import datetime
@@ -36,6 +39,11 @@ async def lifespan(app: FastAPI):
 # Create FastAPI app with lifespan
 app = FastAPI(lifespan=lifespan)
 
+# Rate limiting setup
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
 # Create router
 api_router = APIRouter(prefix="/api")
 
@@ -50,9 +58,9 @@ class StatusCheckCreate(BaseModel):
 
 # Contact Form API Endpoint
 class ContactMessage(BaseModel):
-    name: str
-    email: str
-    message: str
+    name: str = Field(..., max_length=100)
+    email: EmailStr
+    message: str = Field(..., max_length=1000)
     timestamp: datetime = Field(default_factory=datetime.utcnow)
 
 # API routes
@@ -73,7 +81,8 @@ async def get_status_checks():
     return [StatusCheck(**status_check) for status_check in status_checks]
 
 @api_router.post("/contact", response_model=ContactMessage)
-async def submit_contact(message: ContactMessage):
+@limiter.limit("5/minute")
+async def submit_contact(request: Request, message: ContactMessage):
     await db.contact_messages.insert_one(message.dict())
 
     # ✅ Trigger email alert
