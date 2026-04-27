@@ -9,9 +9,17 @@ from pathlib import Path
 # Load env variables from .env
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
-SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
-FROM_EMAIL = os.environ["FROM_EMAIL"]
-TO_EMAIL = os.environ["TO_EMAIL"]
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+if not SENDGRID_API_KEY:
+    raise ValueError("Missing SENDGRID_API_KEY in environment variables or .env file.")
+
+FROM_EMAIL = os.environ.get("FROM_EMAIL")
+if not FROM_EMAIL:
+    raise ValueError("Missing FROM_EMAIL in environment variables or .env file.")
+
+TO_EMAIL = os.environ.get("TO_EMAIL")
+if not TO_EMAIL:
+    raise ValueError("Missing TO_EMAIL in environment variables or .env file.")
 
 def send_email_alert(name: str, email: str, message: str):
     safe_name = html.escape(name)
