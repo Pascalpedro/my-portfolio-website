@@ -208,7 +208,7 @@ export const Header = () => {
         
         <div className="mt-6 flex flex-col sm:flex-row gap-4">
           <a
-            href="https://drive.google.com/file/d/159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs/view?usp=sharing"
+            href="https://drive.google.com/file/d/1VcXz2r8-xvGXerLESYmC47QqjvFOCrqn/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => {
@@ -225,7 +225,7 @@ export const Header = () => {
             👀 View CV
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=159zBhrsYy2yOJ-aoZqtMvWlYC3DXrkYs"
+            href="https://drive.google.com/uc?export=download&id=1VcXz2r8-xvGXerLESYmC47QqjvFOCrqn"
             onClick={(e) => {
               e.stopPropagation();
               if (typeof gtag !== 'undefined') {
