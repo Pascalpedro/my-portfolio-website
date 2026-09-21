@@ -126,7 +126,7 @@ export const Header = () => {
         
         <h1 className="text-2xl font-bold text-white mb-2">Pascal Attama</h1>
         <p className="text-gray-400 text-sm mb-6 bg-gray-700/50 rounded-full px-4 py-2 inline-block">
-          Cloud Security & FinOps Specialist
+          Business Solution Architect
         </p>
 
         <div className="flex justify-center space-x-2 mb-6">
@@ -187,7 +187,7 @@ export const Header = () => {
           <div className="flex justify-between items-center">
             <span className="text-gray-500 uppercase tracking-wider text-xs">EMAIL</span>
             <a 
-              href="mailto:pascal.attama@pedroops.com" 
+              href="mailto:attamapascalpedro@gmail.com" 
               className="text-blue-400 hover:underline transition duration-200"
             >
                Send Email ✉
@@ -336,7 +336,7 @@ export const AboutPage = () => {
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
-            I am an AWS Cloud & IT Infrastructure Engineer with years of experience in Cloud Networking, Infrastructure Automation, and Systems Administration.
+            I am a Cloud & IT Infrastructure Engineer with years of experience in On-Prem Network Infrastructure, Cloud Infrastructure, Automation, and Systems Administration.
             I help businesses <strong>migrate to AWS without downtime, reduce cloud costs, secure AWS environments, and automate deployments</strong> —so you can scale faster, safer, and more cost-effectively.
           </p>
           <p>
@@ -1059,11 +1059,11 @@ export const ContactPage = () => {
           <div className="space-y-4 text-gray-300">
             <div className="flex items-center gap-3">
               <Mail className="text-blue-400" size={20} />
-              <span>pascal.attama@pedroops.com</span>
+              <span>attamapascalpedro@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-blue-400" size={20} />
-              <span>Lagos, Nigeria</span>
+              <span>Nigeria</span>
             </div>
           </div>
         </div>
